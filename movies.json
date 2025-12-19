@@ -1,0 +1,69 @@
+{
+  "estrenos": [
+    {
+      "id": "001",
+      "title": "Guerra Mundial Z",
+      "year": "2013",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=72190&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/31VpBgUX5O4Z3dn5ZbX8HLqoXH3.jpg",
+      "description": "Cuando el mundo comienza a ser invadido por una legión de muertos vivientes, Gerry Lane, un experto investigador de las Naciones Unidas, intentará evitar la caída de la humanidad en una carrera contra el tiempo.",
+      "rating": 7.0,
+      "genres": "Acción, Terror, Ciencia ficción",
+      "tmdbId": "72190",
+      "service": "vimeus"
+    },
+    {
+      "id": "002",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3/Cazando_al_asesino_%282025%29.mp4",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/bZPyBLr2OVUP1J3/MJVKaryG0LIBYL.jpg",
+      "description": "Una emocionante película de acción donde un detective debe atrapar a un peligroso asesino antes de que cometa su próximo crimen.",
+      "rating": 7.2,
+      "genres": "Acción, Thriller",
+      "service": "streamtape"
+    }
+  ],
+  "accion": [
+    {
+      "id": "003",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3/Cazando_al_asesino_%282025%29.mp4",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/bZPyBLr2OVUP1J3/MJVKaryG0LIBYL.jpg",
+      "description": "Una emocionante película de acción donde un detective debe atrapar a un peligroso asesino antes de que cometa su próximo crimen.",
+      "rating": 7.2,
+      "genres": "Acción, Thriller",
+      "service": "streamtape"
+    }
+  ],
+  "drama": [],
+  "infantil": [
+    {
+      "id": "004",
+      "title": "Zootopia",
+      "year": "2016",
+      "embedUrl": "https://streamtape.com/e/MaYPpQDBaMTGlZ/Zootopia_%282016%29.mp4",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/MaYPpQDBaMTGlZ/MPbO9qPxlVHmk9m.jpg",
+      "description": "En una ciudad de animales antropomórficos, una conejita policía novata y un zorro estafador deben trabajar juntos para descubrir una conspiración.",
+      "rating": 8.0,
+      "genres": "Animación, Aventura, Comedia",
+      "service": "streamtape"
+    }
+  ],
+  "ficcion": [],
+  "terror": [
+    {
+      "id": "005",
+      "title": "Guerra Mundial Z",
+      "year": "2013",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=72190&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/31VpBgUX5O4Z3dn5ZbX8HLqoXH3.jpg",
+      "description": "Cuando el mundo comienza a ser invadido por una legión de muertos vivientes, Gerry Lane, un experto investigador de las Naciones Unidas, intentará evitar la caída de la humanidad en una carrera contra el tiempo.",
+      "rating": 7.0,
+      "genres": "Acción, Terror, Ciencia ficción",
+      "tmdbId": "72190",
+      "service": "vimeus"
+    }
+  ]
+}
