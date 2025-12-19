@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar datos desde movies.json
 async function loadMoviesData() {
     try {
-        const response = await fetch('movies-v2.json');
+        const response = await fetch('movies.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar movies.json');
         }
@@ -241,4 +241,5 @@ document.addEventListener('keydown', (e) => {
             section.classList.remove('show');
         });
     }
+
 });
