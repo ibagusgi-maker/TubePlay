@@ -22,10 +22,7 @@
       "rating": 7.2,
       "genres": "Acción, Thriller",
       "service": "streamtape"
-    }
-  ],
- {
-  "estrenos": [
+    },
     {
       "id": "001",
       "title": "Y2K",
@@ -84,3 +81,4 @@
   ]
 
 }
+
