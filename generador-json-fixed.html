@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Generador JSON - CineTube v2 (Corregido)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #fff;
+            padding: 1rem;
+            min-height: 100vh;
+        }
+        
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: calc(100vh - 2rem);
+        }
+        
+        .panel {
+            background: rgba(34, 34, 34, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .app-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            grid-column: 1 / -1;
+        }
+        
+        .app-header h1 {
+            background: linear-gradient(45deg, #ff0000, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .app-header p {
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+        
+        .input-panel h2 {
+            color: #ff6b6b;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ddd;
+            font-weight: 600;
+        }
+        
+        textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #444;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        textarea:focus, select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+            max-height: 300px;
+        }
+        
+        select {
+            font-family: 'Segoe UI', sans-serif;
+            cursor: pointer;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #ff0000, #ff6b6b);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .output-panel h2 {
+            color: #51cf66;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        #jsonOutput {
+            background: rgba(0,0,0,0.8);
+            border: 2px solid #333;
+            min-height: 400px;
+            max-height: 500px;
+            font-size: 0.85rem;
+            font-family: 'Consolas', 'Monaco', monospace;
+            line-height: 1.4;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(45deg, #51cf66, #69db7c);
+            margin-top: 1rem;
+        }
+        
+        .copy-btn:hover {
+            box-shadow: 0 8px 25px rgba(81, 207, 102, 0.4);
+        }
+        
+        .stats {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .stats-item {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #74c0fc;
+        }
+        
+        .stats-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .quick-tips {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .quick-tips h4 {
+            color: #ffc107;
+            margin-bottom: 0.5rem;
+        }
+        
+        .status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .status.show {
+            opacity: 1;
+        }
+        
+        .status.success {
+            background: #51cf66;
+            color: #fff;
+        }
+        
+        .status.error {
+            background: #ff6b6b;
+            color: #fff;
+        }
+        
+        @media (max-width: 1200px) {
+            .app-container {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="app-header">
+            <h1>🎬 Generador JSON - CineTube v2</h1>
+            <p>Versión corregida - IDs únicos y JSON válido</p>
+        </div>
+        
+        <div class="panel input-panel">
+            <h2>📥 Entrada de Datos</h2>
+            
+            <div class="quick-tips">
+                <h4>🔧 Versión Corregida:</h4>
+                <p>Genera JSON válido con IDs únicos y formato correcto para pegar directamente.</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="searchMode">🔍 Modo de búsqueda:</label>
+                <select id="searchMode" onchange="toggleSearchMode()">
+                    <option value="urls">📎 Pegar URLs (Streamtape/Vimeus)</option>
+                    <option value="titles">🔤 Buscar por títulos</option>
+                </select>
+            </div>
+            
+            <div class="form-group" id="urlMode">
+                <label for="streamtapeData">Lista de enlaces (Streamtape o Vimeus):</label>
+                <textarea id="streamtapeData" 
+                          placeholder="Pega aquí tus enlaces...
+
+VIMEUS (con TMDB automático):
+https://vimeus.com/e/movie?tmdb=99861&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q
+
+STREAMTAPE (con thumbnails):
+[URL=&quot;https://streamtape.com/v/CODIGO/pelicula.mp4&quot;][IMG]https://thumb.tapecontent.net/thumb/CODIGO/imagen.jpg[/IMG][/URL]
+
+✨ Obtiene automáticamente título, poster, descripción, rating y géneros desde TMDB."></textarea>
+            </div>
+            
+            <div class="form-group" id="titleMode" style="display: none;">
+                <label for="titleSearch">🎬 Buscar películas por título:</label>
+                <textarea id="titleSearch" 
+                          placeholder="Escribe los títulos de películas, uno por línea:
+
+Ejemplo:
+Guerra Mundial Z
+Avengers Endgame
+El Padrino
+
+✨ Se buscarán automáticamente en TMDB."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="genreSelect">🎭 Categoría:</label>
+                <select id="genreSelect">
+                    <option value="estrenos">🆕 Estrenos</option>
+                    <option value="accion">🔥 Acción</option>
+                    <option value="drama">🎭 Drama</option>
+                    <option value="infantil">👶 Infantil</option>
+                    <option value="ficcion">🚀 Ficción</option>
+                    <option value="terror">👻 Terror</option>
+                </select>
+            </div>
+            
+            <button class="btn" onclick="generateJSON()">🚀 Generar JSON</button>
+            
+            <div class="stats" id="stats" style="display: none;">
+                <div class="stats-item">
+                    <div class="stats-number" id="movieCount">0</div>
+                    <div>Películas</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number" id="categoryDisplay">-</div>
+                    <div>Categoría</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel output-panel">
+            <h2>📄 JSON Listo para Pegar</h2>
+            
+            <textarea id="jsonOutput" readonly 
+                      placeholder="El JSON aparecerá aquí...
+                      
+✅ CORREGIDO:
+- IDs únicos automáticos
+- JSON válido sin comas finales
+- Listo para pegar en movies.json
+
+📋 INSTRUCCIONES:
+1. Genera el JSON
+2. Copia todo el contenido
+3. Ve a movies.json en GitHub
+4. Pega dentro del array de la categoría correspondiente"></textarea>
+            
+            <button class="btn copy-btn" onclick="copyJSON()" id="copyBtn" disabled>
+                📋 Copiar JSON al Portapapeles
+            </button>
+        </div>
+    </div>
+    
+    <div class="status" id="status"></div>
+    
+    <script>
+        let generatedMovies = [];
+        const TMDB_API_KEY = '7a503037e4f95d5d04e703980ed5104f';
+        const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
+        const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+        
+        function showStatus(message, type = 'success') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type} show`;
+            
+            setTimeout(() => {
+                status.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Función para obtener datos de TMDB
+        async function getTMDBData(tmdbId, type = 'movie') {
+            try {
+                const response = await fetch(`${TMDB_BASE_URL}/${type}/${tmdbId}?api_key=${TMDB_API_KEY}&language=es-ES`);
+                if (!response.ok) {
+                    const responseEN = await fetch(`${TMDB_BASE_URL}/${type}/${tmdbId}?api_key=${TMDB_API_KEY}&language=en-US`);
+                    if (!responseEN.ok) throw new Error('Movie not found');
+                    return await responseEN.json();
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching TMDB data:', error);
+                return null;
+            }
+        }
+        
+        // Función para buscar película por título
+        async function searchTMDBByTitle(title) {
+            try {
+                const response = await fetch(`${TMDB_BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&language=es-ES&query=${encodeURIComponent(title)}`);
+                if (!response.ok) throw new Error('Search failed');
+                const data = await response.json();
+                return data.results[0] || null;
+            } catch (error) {
+                console.error('Error searching TMDB:', error);
+                return null;
+            }
+        }
+        
+        // Función para cambiar entre modos de búsqueda
+        function toggleSearchMode() {
+            const mode = document.getElementById('searchMode').value;
+            const urlMode = document.getElementById('urlMode');
+            const titleMode = document.getElementById('titleMode');
+            
+            if (mode === 'titles') {
+                urlMode.style.display = 'none';
+                titleMode.style.display = 'block';
+                document.getElementById('titleSearch').focus();
+            } else {
+                urlMode.style.display = 'block';
+                titleMode.style.display = 'none';
+                document.getElementById('streamtapeData').focus();
+            }
+        }
+        
+        async function generateJSON() {
+            const mode = document.getElementById('searchMode').value;
+            const category = document.getElementById('genreSelect').value;
+            
+            let data;
+            if (mode === 'titles') {
+                data = document.getElementById('titleSearch').value.trim();
+            } else {
+                data = document.getElementById('streamtapeData').value.trim();
+            }
+            
+            if (!data) {
+                const errorMsg = mode === 'titles' ? 
+                    '❌ Por favor escribe los títulos de películas' : 
+                    '❌ Por favor pega la lista de Streamtape o Vimeus';
+                showStatus(errorMsg, 'error');
+                return;
+            }
+            
+            try {
+                showStatus('🔄 Procesando películas y obteniendo datos de TMDB...', 'success');
+                
+                if (mode === 'titles') {
+                    const titles = data.split('\n').filter(t => t.trim() !== '');
+                    generatedMovies = await searchMoviesByTitles(titles);
+                } else {
+                    generatedMovies = await parseStreamtapeDataWithTMDB(data);
+                }
+                
+                const jsonCode = generateMovieJSON(generatedMovies, category);
+                
+                document.getElementById('jsonOutput').value = jsonCode;
+                document.getElementById('copyBtn').disabled = false;
+                
+                // Actualizar estadísticas
+                document.getElementById('movieCount').textContent = generatedMovies.length;
+                document.getElementById('categoryDisplay').textContent = category;
+                document.getElementById('stats').style.display = 'block';
+                
+                showStatus(`✅ ${generatedMovies.length} películas generadas correctamente`);
+                
+            } catch (error) {
+                showStatus('❌ Error: ' + error.message, 'error');
+                console.error('Error:', error);
+            }
+        }
+        
+        // Función para buscar películas por título
+        async function searchMoviesByTitles(titles) {
+            const movies = [];
+            
+            for (const title of titles) {
+                if (title.trim() === '') continue;
+                
+                showStatus(`🔍 Buscando: ${title}...`, 'success');
+                
+                const tmdbData = await searchTMDBByTitle(title.trim());
+                
+                if (tmdbData) {
+                    movies.push({
+                        id: `tmdb_${tmdbData.id}_${Date.now()}`, // ID único
+                        title: tmdbData.title,
+                        year: tmdbData.release_date ? tmdbData.release_date.split('-')[0] : '',
+                        embedUrl: '', // No hay URL de embed para búsquedas por título
+                        thumbUrl: tmdbData.poster_path ? `${TMDB_IMAGE_BASE}${tmdbData.poster_path}` : '',
+                        description: tmdbData.overview || '',
+                        rating: tmdbData.vote_average || 0,
+                        genres: '', // Se llenará después si es necesario
+                        tmdbId: tmdbData.id.toString(),
+                        service: 'tmdb-search'
+                    });
+                } else {
+                    movies.push({
+                        id: `notfound_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+                        title: title.trim(),
+                        year: '',
+                        embedUrl: '',
+                        thumbUrl: '',
+                        description: 'No encontrada en TMDB',
+                        rating: 0,
+                        genres: '',
+                        service: 'not-found'
+                    });
+                }
+                
+                // Pequeña pausa para evitar rate limiting
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+            
+            return movies;
+        }
+        
+        // Función para parsear datos con TMDB
+        async function parseStreamtapeDataWithTMDB(data) {
+            const movies = [];
+            
+            // OPCIÓN 1: Detectar URLs de Vimeus con TMDB ID
+            const vimeusRegex = /https:\/\/vimeus\.com\/e\/movie\?tmdb=(\d+)&view_key=([^\s\n]+)/g;
+            let vimeusMatch;
+            
+            while ((vimeusMatch = vimeusRegex.exec(data)) !== null) {
+                const embedUrl = vimeusMatch[0];
+                const tmdbId = vimeusMatch[1];
+                
+                showStatus(`🔍 Obteniendo datos TMDB para ID: ${tmdbId}...`, 'success');
+                
+                // Obtener datos de TMDB
+                const tmdbData = await getTMDBData(tmdbId, 'movie');
+                
+                if (tmdbData) {
+                    movies.push({
+                        id: `vimeus_${tmdbId}_${Date.now()}`, // ID único
+                        title: tmdbData.title || `Película TMDB ${tmdbId}`,
+                        year: tmdbData.release_date ? tmdbData.release_date.split('-')[0] : '',
+                        embedUrl: embedUrl,
+                        thumbUrl: tmdbData.poster_path ? `${TMDB_IMAGE_BASE}${tmdbData.poster_path}` : '',
+                        description: tmdbData.overview || '',
+                        rating: tmdbData.vote_average || 0,
+                        genres: tmdbData.genres ? tmdbData.genres.map(g => g.name).join(', ') : '',
+                        tmdbId: tmdbId,
+                        service: 'vimeus'
+                    });
+                } else {
+                    movies.push({
+                        id: `vimeus_${tmdbId}_${Date.now()}`,
+                        title: `Película TMDB ${tmdbId}`,
+                        year: '',
+                        embedUrl: embedUrl,
+                        thumbUrl: '',
+                        description: '',
+                        rating: 0,
+                        genres: '',
+                        tmdbId: tmdbId,
+                        service: 'vimeus'
+                    });
+                }
+                
+                // Pausa para evitar rate limiting
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            
+            // OPCIÓN 2: Detectar formato Streamtape con thumbnails
+            const streamtapeRegex = /\[URL="https:\/\/streamtape\.com\/v\/([^\/]+)\/([^"]+)"\]\[IMG\]https:\/\/thumb\.tapecontent\.net\/thumb\/([^\/]+)\/([^"]+)\[\/IMG\]\[\/URL\]/g;
+            let streamtapeMatch;
+            
+            while ((streamtapeMatch = streamtapeRegex.exec(data)) !== null) {
+                const videoCode = streamtapeMatch[1];
+                const fileName = streamtapeMatch[2];
+                const thumbCode = streamtapeMatch[3];
+                const thumbImage = streamtapeMatch[4];
+                
+                // Limpiar y decodificar el título
+                let title = decodeURIComponent(fileName)
+                    .replace(/\.mp4$/, '')
+                    .replace(/_/g, ' ')
+                    .replace(/-/g, ' ')
+                    .trim();
+                
+                // Extraer año
+                const yearMatch = title.match(/\((\d{4})\)/);
+                const year = yearMatch ? yearMatch[1] : '';
+                const cleanTitle = title.replace(/\s*\(\d{4}\)\s*/, '').trim();
+                
+                movies.push({
+                    id: `streamtape_${videoCode}_${Date.now()}`, // ID único
+                    title: cleanTitle,
+                    year: year,
+                    embedUrl: `https://streamtape.com/e/${videoCode}/${fileName}`,
+                    thumbUrl: `https://thumb.tapecontent.net/thumb/${thumbCode}/${thumbImage}`,
+                    description: '',
+                    rating: 0,
+                    genres: '',
+                    service: 'streamtape'
+                });
+            }
+            
+            if (movies.length === 0) {
+                throw new Error('No se encontraron películas válidas. Verifica el formato de la lista.');
+            }
+            
+            return movies;
+        }
+        
+        // Función para generar JSON válido
+        function generateMovieJSON(movies, category) {
+            const moviesArray = movies.map(movie => ({
+                id: movie.id,
+                title: movie.title,
+                year: movie.year,
+                embedUrl: movie.embedUrl,
+                thumbUrl: movie.thumbUrl,
+                description: movie.description,
+                rating: movie.rating,
+                genres: movie.genres,
+                ...(movie.tmdbId && { tmdbId: movie.tmdbId }),
+                service: movie.service
+            }));
+            
+            // Generar JSON válido listo para pegar
+            let output = `// ================================\n`;
+            output += `// PELÍCULAS PARA CATEGORÍA: ${category.toUpperCase()}\n`;
+            output += `// ================================\n`;
+            output += `// INSTRUCCIONES:\n`;
+            output += `// 1. Copia todo el contenido de abajo\n`;
+            output += `// 2. Ve a movies.json en GitHub\n`;
+            output += `// 3. Busca la sección "${category}": [\n`;
+            output += `// 4. Pega las películas dentro del array\n`;
+            output += `// 5. Guarda el archivo\n`;
+            output += `// ================================\n\n`;
+            
+            // Generar cada película como JSON válido
+            moviesArray.forEach((movie, index) => {
+                output += JSON.stringify(movie, null, 2);
+                // Agregar coma solo si no es la última película
+                if (index < moviesArray.length - 1) {
+                    output += ',';
+                }
+                output += '\n\n';
+            });
+            
+            return output;
+        }
+        
+        function copyJSON() {
+            const output = document.getElementById('jsonOutput');
+            output.select();
+            document.execCommand('copy');
+            
+            const btn = document.getElementById('copyBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '✅ ¡Copiado!';
+            btn.style.background = 'linear-gradient(45deg, #51cf66, #69db7c)';
+            
+            showStatus(`📋 JSON copiado al portapapeles (${generatedMovies.length} películas)`);
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = 'linear-gradient(45deg, #51cf66, #69db7c)';
+            }, 2000);
+        }
+        
+        // Auto-focus en el textarea al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('streamtapeData').focus();
+        });
+    </script>
+</body>
+</html>
