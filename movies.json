@@ -125,6 +125,18 @@
   "ficcion": [],
   "terror": [
     {
+      "id": "vimeus_717728_1766240198000",
+      "title": "Jeepers Creepers: El renacer",
+      "year": "2022",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=717728&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/kPlknIjzXkmhmR24NfXa4ECc5Wm.jpg",
+      "description": "Obligada a viajar con su novio, Laine, comienza a experimentar premoniciones asociadas con el mito urbano de The Creeper. Laine cree que se ha convocado algo sobrenatural, y que ella está en el centro de todo.",
+      "rating": 5.346,
+      "genres": "Terror",
+      "tmdbId": "717728",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_55341_1766240161718",
       "title": "Jeepers Creepers 3",
       "year": "2017",
