@@ -125,6 +125,18 @@
   "ficcion": [],
   "terror": [
     {
+      "id": "vimeus_756999_1766239937949",
+      "title": "Black Phone",
+      "year": "2022",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=756999&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/eVgRJqGCWmI5DlIOoHnP2G77PSO.jpg",
+      "description": "En una ciudad de Colorado, en los años 70, un enmascarado secuestra a Finney Shaw, un chico tímido e inteligente de 13 años, y le encierra en un sótano insonorizado donde de nada sirven sus gritos. Cuando un teléfono roto y sin conexión empieza a sonar, Finney descubre que a través de él puede oír las voces de las anteriores víctimas, las cuales están decididas a impedir que Finney acabe igual que ellas.",
+      "rating": 7.545,
+      "genres": "Terror, Suspense",
+      "tmdbId": "756999",
+      "service": "vimeus"
+    },
+    {
       "id": "005",
       "title": "Guerra Mundial Z",
       "year": "2013",
