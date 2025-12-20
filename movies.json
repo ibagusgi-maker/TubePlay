@@ -170,7 +170,20 @@
       "service": "streamtape"
     }
   ],
-  "ficcion": [],
+  "ficcion": [
+    {
+      "id": "vimeus_329_1766240816604",
+      "title": "Jurassic Park (Parque Jurásico)",
+      "year": "1993",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=329&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/h831eszSFmEyr94WKcgscqPIRbh.jpg",
+      "description": "El multimillonario John Hammond tiene una idea para un espectacular parque temático: una isla retirada donde los visitantes puedan observar dinosaurios reales. Con la última tecnología en el desarrollo de ADN, los científicos pueden clonar braquiosaurios, triceratops, velociraptors y un tiranosaurio rex, utilizando para ello la sangre fosilizada en ámbar contenida en insectos que los mordieron hace millones de años. Los paleontólogos Alan Grant, Ellie Sattler y Ian Malcolm visitan el parque y quedan muy sorprendidos con los resultados obtenidos. Pero cuando un problemático empleado manipula el sofisticado sistema de seguridad los dinosaurios escapan, obligando a los visitantes a luchar por su supervivencia.",
+      "rating": 7.963,
+      "genres": "Aventura, Ciencia ficción",
+      "tmdbId": "329",
+      "service": "vimeus"
+    }
+  ],
   "terror": [
     {
       "id": "vimeus_717728_1766240198000",
