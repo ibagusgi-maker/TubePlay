@@ -50,6 +50,18 @@
   ],
   "accion": [
     {
+      "id": "vimeus_955_1766241577959",
+      "title": "Misión imposible 2",
+      "year": "2000",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=955&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/mskE3W88cjMRrnKQye8pjmJu3O1.jpg",
+      "description": "El agente especial Ethan Hunt tiene una nueva misión: evitar que un despiadado ex-agente y ahora terrorista internacional se haga con un virus mortal que podría soltar sobre Australia causando millones de víctimas. Para evitarlo, contará otra vez con la inestimable ayuda del genio informático Luther Stickell, del experto conductor Billy Baird y de la presencia de la sensual y exótica ladrona internacional Nhye, que en el pasado mantuvo una relación sentimental con el criminal y que ahora se siente atraída por Hunt.",
+      "rating": 6.135,
+      "genres": "Aventura, Acción, Suspense",
+      "tmdbId": "955",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_954_1766241551977",
       "title": "Misión imposible",
       "year": "1996",
