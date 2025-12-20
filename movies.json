@@ -172,6 +172,18 @@
   ],
   "ficcion": [
     {
+      "id": "vimeus_135397_1766240909750",
+      "title": "Jurassic World",
+      "year": "2015",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=135397&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/sOgfattHPWE5sWdVCGHQ08GEbaP.jpg",
+      "description": "Veintidós años después de lo ocurrido en Jurassic Park, la isla Nublar ha sido transformada en un parque temático, Jurassic Wold, con versiones «domesticadas» de algunos de los dinosaurios más conocidos. Cuando todo parece ir a la perfección y ser el negocio del siglo, un nuevo dinosaurio de especie todavía desconocida y que es mucho más inteligente de lo que se pensaba, comienza a causar estragos entre los visitantes del Parque.",
+      "rating": 6.699,
+      "genres": "Acción, Aventura, Ciencia ficción, Suspense",
+      "tmdbId": "135397",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_331_1766240880182",
       "title": "Jurassic Park III (Parque Jurásico III)",
       "year": "2001",
