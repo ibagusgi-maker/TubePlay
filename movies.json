@@ -125,6 +125,18 @@
   "ficcion": [],
   "terror": [
     {
+      "id": "vimeus_55341_1766240161718",
+      "title": "Jeepers Creepers 3",
+      "year": "2017",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=55341&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/zOGuuXPakkQCxkgriylW4aeoFeM.jpg",
+      "description": "La historia transcurre entre la primera y segunda entrega y en ella, el escéptico Sargento Tubbs, unirá sus fuerzas con un grupo de armado que quiere destruir a The Creeper de una vez por todas. A medida que se produce un sangriento enfrentamiento entre ellos, podrán descubrir los orígenes de la criatura.",
+      "rating": 4.91,
+      "genres": "Terror",
+      "tmdbId": "55341",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_11351_1766240126414",
       "title": "Jeepers Creepers 2",
       "year": "2003",
