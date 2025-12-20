@@ -281,6 +281,18 @@
   ],
   "ficcion": [
     {
+      "id": "vimeus_440_1766266390025",
+      "title": "Aliens vs. Predator 2",
+      "year": "2007",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=440&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/3U0JSDmyqXlCOlXeCcPD5PQmp9Q.jpg",
+      "description": "Cuando una nave exploradora Predator se estrella, aparece en un pueblo de Colorado. Los Aliens a bordo escapan y matan a todos los Predators excepto a uno. El último Predator superviviente debe ahora acabar con todos los Aliens, así como con el terrorífico Pred-Alien que fue engendrado en la anterior entrega. Mientras tanto, los habitantes del pueblo están siendo inutilmente atrapados en medio del último enfrentamiento entre estas dos criaturas míticas.",
+      "rating": 5.177,
+      "genres": "Acción, Ciencia ficción, Suspense, Terror",
+      "tmdbId": "440",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_395_1766266255070",
       "title": "Alien vs. Predator",
       "year": "2004",
