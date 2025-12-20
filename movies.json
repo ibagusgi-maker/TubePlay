@@ -172,6 +172,18 @@
   ],
   "ficcion": [
     {
+      "id": "vimeus_331_1766240880182",
+      "title": "Jurassic Park III (Parque Jurásico III)",
+      "year": "2001",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=331&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/5GM4Nqc79PFE3IOqNKwmOxAWkX1.jpg",
+      "description": "El doctor Alan Grant, ansioso por conseguir fondos que financien su estudio sobre la inteligencia del velociraptor, acepta la oferta de pareja de millonarios, Paul y Amanda Kirby, para sobrevolar la Isla Sorna, en Puerto Rico, poblada por dinosaurios creados genéticamente para un parque recreativo. Tras producirse un aterrizaje forzoso en la isla, Alan descubre que los Kirby estaban buscando a su hijo adolescente, perdido en la isla tras un accidente de parapente.",
+      "rating": 6.17,
+      "genres": "Aventura, Acción, Suspense, Ciencia ficción",
+      "tmdbId": "331",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_330_1766240849143",
       "title": "El mundo perdido: Jurassic Park",
       "year": "1997",
