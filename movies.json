@@ -50,6 +50,18 @@
   ],
   "accion": [
     {
+      "id": "vimeus_954_1766241551977",
+      "title": "Misión imposible",
+      "year": "1996",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=954&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/xCpmxw3UUjv4PGzbIPOHeoKAV0l.jpg",
+      "description": "Ethan Hunt es un superespía capaz de resolver cualquier arriesgada situación con la máxima elegancia. Forma parte de un competente equipo dirigido por el agente Jim Phelps, que ha vuelto a reunir a sus hombres para participar en una dificilísima misión: evitar la venta de un disco robado que contiene información secreta de vital importancia.",
+      "rating": 7.015,
+      "genres": "Aventura, Acción, Suspense",
+      "tmdbId": "954",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_47933_1766240709323",
       "title": "Independence Day: Contraataque",
       "year": "2016",
