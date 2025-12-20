@@ -4,7 +4,7 @@
       "id": "vimeus_1107387_1766242054375",
       "title": "Hachiko",
       "year": "2023",
-      "embedUrl": "https://www.youtube.com/embed/JN4mBwkVOno?si=PskHF4nNzZw5GTiR",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1107387&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/sT5SHjXlrKZwSbcvi70dmoDEHms.jpg",
       "description": "Hachiko (Batong) es un lindo perro pastor chino. Conoce a su dueÃ±o Chen Jingxiu entre la gran multitud y se convierte en miembro de la familia Chen. Con el paso del tiempo, la casa que alguna vez fue hermosa ya no estÃ¡ allÃ­, pero Batong espera y espera, sabiendo que su destino estÃ¡ estrechamente ligado a su familia.",
       "rating": 7.926,
@@ -402,6 +402,17 @@
     }
   ],
   "terror": [
+    {
+      "id": "streamtape_dv3wKZmLvAHkRV7_1766267981266",
+      "title": "SHAKMA",
+      "year": "1990",
+      "embedUrl": "https://streamtape.com/e/dv3wKZmLvAHkRV7/SHAKMA_%281990%29.mp4",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/dv3wKZmLvAHkRV7/0Lpd2GaVLgTblJk.jpg",
+      "description": "",
+      "rating": 0,
+      "genres": "",
+      "service": "streamtape"
+    },
     {
       "id": "vimeus_717728_1766240198000",
       "title": "Jeepers Creepers: El renacer",
