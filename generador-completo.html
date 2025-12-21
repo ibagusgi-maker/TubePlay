@@ -699,7 +699,7 @@
         function generateUniqueId(service) {
             const timestamp = Date.now();
             const random = Math.floor(Math.random() * 1000);
-            return `${service}_${timestamp}_${random}`;
+            return `${timestamp}_${random}`;
         }
 
         // Agregar película al JSON
@@ -726,7 +726,7 @@
         async function loadMoviesData() {
             if (config.githubToken && config.githubRepo) {
                 try {
-                    const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
+                    const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
                         headers: {
                             'Authorization': `token ${config.githubToken}`,
                             'Accept': 'application/vnd.github.v3+json'
@@ -747,7 +747,7 @@
             } else {
                 // Intentar cargar desde archivo local
                 try {
-                    const response = await fetch('movies.json');
+                    const response = await fetch('movies-v2.json');
                     if (response.ok) {
                         moviesData = await response.json();
                     } else {
@@ -776,7 +776,7 @@
             // Obtener SHA actual del archivo
             let sha = null;
             try {
-                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
+                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
                     headers: {
                         'Authorization': `token ${config.githubToken}`,
                         'Accept': 'application/vnd.github.v3+json'
@@ -801,7 +801,7 @@
                 uploadData.sha = sha;
             }
             
-            const uploadResponse = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
+            const uploadResponse = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `token ${config.githubToken}`,
@@ -849,11 +849,13 @@
 
         // Crear tarjeta de película
         function createMovieCard(movie, genre) {
-            const movieId = `${genre}_${movie.id || movie.title.replace(/\s+/g, '_')}`;
+            // Crear ID único más robusto
+            const movieId = `${genre}_${movie.id || movie.title.replace(/[^a-zA-Z0-9]/g, '_') || Date.now()}`;
+            
             return `
-                <div class="movie-card" data-movie-id="${movieId}">
+                <div class="movie-card" data-movie-id="${movieId}" data-genre="${genre}">
                     <img src="${movie.thumbUrl || 'https://via.placeholder.com/300x200?text=Sin+Imagen'}" alt="${movie.title}" onerror="this.src='https://via.placeholder.com/300x200?text=Sin+Imagen'">
-                    <h3>${movie.title} ${movie.year ? `(${movie.year})` : ''}</h3>
+                    <h3>${movie.title || 'Sin título'} ${movie.year ? `(${movie.year})` : ''}</h3>
                     <p><strong>Género:</strong> ${getCategoryName(genre)}</p>
                     <p><strong>Servicio:</strong> ${movie.service || 'N/A'}</p>
                     ${movie.rating ? `<p><strong>Rating:</strong> ⭐ ${movie.rating}</p>` : ''}
@@ -875,29 +877,52 @@
 
         function deleteMovie(movieId, genre) {
             if (confirm('¿Estás seguro de que quieres eliminar esta película?')) {
-                const movieTitle = movieId.replace(`${genre}_`, '').replace(/_/g, ' ');
-                let movieIndex = -1;
+                console.log('Intentando eliminar:', movieId, 'del género:', genre);
                 
-                // Buscar por ID o por título
-                if (moviesData[genre]) {
+                if (!moviesData[genre] || !Array.isArray(moviesData[genre])) {
+                    showStatus('Error: Género no encontrado', 'error');
+                    return;
+                }
+                
+                // Buscar la película por diferentes métodos
+                let movieIndex = -1;
+                const cleanId = movieId.replace(`${genre}_`, '');
+                
+                // Método 1: Por ID exacto
+                movieIndex = moviesData[genre].findIndex(m => m.id === cleanId);
+                
+                // Método 2: Por título (si no tiene ID)
+                if (movieIndex === -1) {
+                    const titleToFind = cleanId.replace(/_/g, ' ');
                     movieIndex = moviesData[genre].findIndex(m => 
-                        m.id === movieTitle || 
-                        m.title.replace(/\s+/g, '_') === movieTitle ||
-                        m.title === movieTitle
+                        m.title && m.title.toLowerCase() === titleToFind.toLowerCase()
                     );
                 }
                 
+                // Método 3: Por posición si es un número
+                if (movieIndex === -1 && !isNaN(cleanId)) {
+                    const position = parseInt(cleanId);
+                    if (position >= 0 && position < moviesData[genre].length) {
+                        movieIndex = position;
+                    }
+                }
+                
+                console.log('Índice encontrado:', movieIndex);
+                
                 if (movieIndex !== -1) {
-                    const movieTitle = moviesData[genre][movieIndex].title;
+                    const movieTitle = moviesData[genre][movieIndex].title || 'Película sin título';
                     moviesData[genre].splice(movieIndex, 1);
+                    
                     uploadToGitHub().then(() => {
                         showStatus(`"${movieTitle}" eliminada exitosamente`, 'success');
                         loadMovies();
                     }).catch(error => {
                         showStatus('Error al eliminar: ' + error.message, 'error');
+                        console.error('Error uploading:', error);
                     });
                 } else {
                     showStatus('No se pudo encontrar la película para eliminar', 'error');
+                    console.log('Películas disponibles:', moviesData[genre]);
                 }
             }
         }
