@@ -65,10 +65,22 @@
       "year": "2025",
       "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3/Cazando_al_asesino_%282025%29.mp4",
       "thumbUrl": "https://thumb.tapecontent.net/thumb/bZPyBLr2OVUP1J3/MJVKaryG0LIBYL.jpg",
-      "description": "Una emocionante peli­cula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
+      "description": "Una emocionante pelÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­cula de acciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n donde un detective debe atrapar a un peligroso asesino antes de que cometa su prÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³ximo crimen.",
       "rating": 7.2,
-      "genres": "Accion, Thriller",
+      "genres": "AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, Thriller",
       "service": "streamtape"
+    },
+    {
+      "id": "vimeus_1094274_1766140517337",
+      "title": "Y2K",
+      "year": "2024",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1094274&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/qndubIQalyxBJI5EBNZKGXEX74q.jpg",
+      "description": "Dos estudiantes del colegio toman la decisiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n de colarse en la ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºltima celebraciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n antes del nuevo milenio en la Nochevieja de 1999. La noche se vuelve aÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºn mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡s loca de lo que jamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡s podrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­an haber soÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±ado cuando el reloj marca la medianoche.",
+      "rating": 5.192,
+      "genres": "Comedia, Terror, Ciencia ficciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
+      "tmdbId": "1094274",
+      "service": "vimeus"
     }
   ],
   "accion": [
@@ -470,6 +482,18 @@
     }
   ],
   "terror": [
+    {
+      "id": "vimeus_72190_1766361387245",
+      "title": "Guerra Mundial Z",
+      "year": "2013",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=72190&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/a8ogjWFd0QS6BzBkzfDMWukc26i.jpg",
+      "description": "Cuando el mundo comienza a ser invadido por una legión de muertos vivientes, Gerry Lane, un experto investigador de las Naciones Unidas, intentará evitar el fin de la civilización en una carrera contra el tiempo y el destino. La destrucción a la que se ve sometida la raza humana lo lleva a recorrer el mundo entero buscando la solución para frenar esa horrible epidemia.",
+      "rating": 6.825,
+      "genres": "Acción, Terror, Ciencia ficción, Suspense",
+      "tmdbId": "72190",
+      "service": "vimeus"
+    },
     {
       "id": "streamtape_dv3wKZmLvAHkRV7_1766267981266",
       "title": "SHAKMA",
