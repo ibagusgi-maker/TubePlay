@@ -849,7 +849,7 @@
 
         // Crear tarjeta de película
         function createMovieCard(movie, genre) {
-            const movieId = `${genre}_${movie.id}`;
+            const movieId = `${genre}_${movie.id || movie.title.replace(/\s+/g, '_')}`;
             return `
                 <div class="movie-card" data-movie-id="${movieId}">
                     <img src="${movie.thumbUrl || 'https://via.placeholder.com/300x200?text=Sin+Imagen'}" alt="${movie.title}" onerror="this.src='https://via.placeholder.com/300x200?text=Sin+Imagen'">
@@ -859,8 +859,8 @@
                     ${movie.rating ? `<p><strong>Rating:</strong> ⭐ ${movie.rating}</p>` : ''}
                     <p style="font-size: 0.8rem; color: #aaa;">${(movie.description || '').substring(0, 100)}${movie.description && movie.description.length > 100 ? '...' : ''}</p>
                     <div class="movie-actions">
-                        <button class="btn" onclick="editMovie('${movieId}')">✏️ Editar</button>
-                        <button class="btn btn-danger" onclick="deleteMovie('${movieId}')">🗑️ Eliminar</button>
+                        <button class="btn" onclick="editMovie('${movieId}', '${genre}')">✏️ Editar</button>
+                        <button class="btn btn-danger" onclick="deleteMovie('${movieId}', '${genre}')">🗑️ Eliminar</button>
                         <button class="btn btn-secondary" onclick="toggleSelect('${movieId}')">☑️ Seleccionar</button>
                     </div>
                 </div>
@@ -873,19 +873,31 @@
             showStatus('Función de edición en desarrollo', 'info');
         }
 
-        function deleteMovie(movieId) {
+        function deleteMovie(movieId, genre) {
             if (confirm('¿Estás seguro de que quieres eliminar esta película?')) {
-                const [genre, id] = movieId.split('_', 2);
-                const movieIndex = moviesData[genre].findIndex(m => m.id === id);
+                const movieTitle = movieId.replace(`${genre}_`, '').replace(/_/g, ' ');
+                let movieIndex = -1;
+                
+                // Buscar por ID o por título
+                if (moviesData[genre]) {
+                    movieIndex = moviesData[genre].findIndex(m => 
+                        m.id === movieTitle || 
+                        m.title.replace(/\s+/g, '_') === movieTitle ||
+                        m.title === movieTitle
+                    );
+                }
                 
                 if (movieIndex !== -1) {
+                    const movieTitle = moviesData[genre][movieIndex].title;
                     moviesData[genre].splice(movieIndex, 1);
                     uploadToGitHub().then(() => {
-                        showStatus('Película eliminada exitosamente', 'success');
+                        showStatus(`"${movieTitle}" eliminada exitosamente`, 'success');
                         loadMovies();
                     }).catch(error => {
                         showStatus('Error al eliminar: ' + error.message, 'error');
                     });
+                } else {
+                    showStatus('No se pudo encontrar la película para eliminar', 'error');
                 }
             }
         }
