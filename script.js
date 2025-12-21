@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar datos desde movies.json
 async function loadMoviesData() {
     try {
-        const response = await fetch('movies-v2.json');
+        const response = await fetch('movies.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar movies.json');
         }
@@ -34,7 +34,7 @@ async function loadMoviesData() {
     } catch (error) {
         console.error('Error cargando películas:', error);
         document.getElementById('categoriesContainer').innerHTML = 
-            '<div class="error">❌ Error cargando películas. Verifica que movies-v2.json existe.</div>';
+            '<div class="error">❌ Error cargando películas. Verifica que movies.json existe.</div>';
     }
 }
 
@@ -325,3 +325,4 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
