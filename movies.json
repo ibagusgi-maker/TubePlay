@@ -254,6 +254,18 @@
   ],
   "drama": [
     {
+      "id": "tmdb_31743_1766276540723",
+      "title": "Hachiko",
+      "year": "1987",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/d2kXnywmFkhy8gcKCo7nHsmxXnE.jpg",
+      "description": "Basada en un hecho real. Hachiko es un perro de raza akita que es adquirido por el profesor Ueno, docente en la Facultad de Ingeniería Agrónoma de la Universidad de Tokio. Todas las mañanas, Hachiko acompaña a su amo hasta la estación de Shibuya, donde éste coge el tren para ir a su trabajo. Por las tardes, Hachiko regresa a Shibuya y espera a su amo a la puerta de la estación. Un día el profesor Ueno sufre un ataque cardíaco en el aula y fallece en el acto, y Hachiko acude día tras día a la estación para esperar a un amo que ya nunca más volverá.",
+      "rating": 7.8,
+      "genres": "",
+      "tmdbId": "31743",
+      "service": "tmdb-search"
+    },
+    {
       "id": "streamtape_qxzaP6ovrXTzrqa_1766270019288",
       "title": "Nunca mÃ¡s",
       "year": "2002",
