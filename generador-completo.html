@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineTube - Generador Completo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: #444;
+            transform: translateY(-1px);
+        }
+
+        .tab-content {
+            display: none;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 2px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #666, #888);
+        }
+
+        .btn-danger {
+            background: linear-gradient(45deg, #dc3545, #e74c3c);
+        }
+
+        .btn-success {
+            background: linear-gradient(45deg, #28a745, #34ce57);
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .movie-card {
+            background: #333;
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .movie-card:hover {
+            border-color: #ff6b6b;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .movie-card h3 {
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .movie-card p {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .movie-actions {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .movie-actions .btn {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .status.success {
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid #28a745;
+            color: #28a745;
+        }
+
+        .status.error {
+            background: rgba(220, 53, 69, 0.2);
+            border: 1px solid #dc3545;
+            color: #dc3545;
+        }
+
+        .status.info {
+            background: rgba(23, 162, 184, 0.2);
+            border: 1px solid #17a2b8;
+            color: #17a2b8;
+        }
+
+        .github-config {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .github-config h3 {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .service-detector {
+            background: rgba(23, 162, 184, 0.1);
+            border: 1px solid #17a2b8;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-detector h3 {
+            color: #17a2b8;
+            margin-bottom: 10px;
+        }
+
+        .genre-manager {
+            background: rgba(108, 117, 125, 0.1);
+            border: 1px solid #6c757d;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .genre-tag {
+            background: #ff6b6b;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .genre-tag:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #aaa;
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ff6b6b;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .movie-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 CineTube - Generador Completo</h1>
+            <p>Gestión completa de películas con soporte para Streamtape, Vimeus e Internet Archive</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('add')">➕ Agregar Película</button>
+            <button class="tab-btn" onclick="showTab('manage')">📋 Gestionar Películas</button>
+            <button class="tab-btn" onclick="showTab('genres')">🏷️ Géneros</button>
+            <button class="tab-btn" onclick="showTab('config')">⚙️ Configuración</button>
+        </div>
+
+        <!-- Tab: Agregar Película -->
+        <div id="add-tab" class="tab-content active">
+            <div class="service-detector">
+                <h3>🔍 Detector de Servicio</h3>
+                <p>Pega tu enlace y el sistema detectará automáticamente el servicio y extraerá la información necesaria.</p>
+            </div>
+
+            <form id="movieForm">
+                <div class="form-group">
+                    <label for="embedUrl">🔗 URL de la Película *</label>
+                    <input type="url" id="embedUrl" placeholder="https://streamtape.com/e/... o https://vimeus.com/e/... o https://archive.org/embed/..." required>
+                    <small style="color: #aaa; display: block; margin-top: 5px;">
+                        Soporta: Streamtape, Vimeus, Internet Archive
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="tmdbId">🎬 ID de TMDB (opcional)</label>
+                    <input type="text" id="tmdbId" placeholder="Ej: 72190 (se detecta automáticamente en Vimeus)">
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">📂 Género *</label>
+                    <select id="genre" required>
+                        <option value="">Selecciona un género</option>
+                        <option value="estrenos">Estrenos</option>
+                        <option value="accion">Acción</option>
+                        <option value="drama">Drama</option>
+                        <option value="infantil">Infantil</option>
+                        <option value="ficcion">Ficción</option>
+                        <option value="terror">Terror</option>
+                        <option value="custom">➕ Crear nuevo género...</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="customGenreGroup" style="display: none;">
+                    <label for="customGenre">🆕 Nuevo Género</label>
+                    <input type="text" id="customGenre" placeholder="Ej: comedia, romantica, documental">
+                </div>
+
+                <div class="form-group">
+                    <label for="manualTitle">📝 Título Manual (opcional)</label>
+                    <input type="text" id="manualTitle" placeholder="Solo si quieres sobrescribir el título de TMDB">
+                </div>
+
+                <div class="form-group">
+                    <label for="manualDescription">📄 Descripción Manual (opcional)</label>
+                    <textarea id="manualDescription" placeholder="Solo si quieres sobrescribir la descripción de TMDB"></textarea>
+                </div>
+
+                <button type="submit" class="btn">🚀 Generar y Agregar Película</button>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">🗑️ Limpiar Formulario</button>
+            </form>
+        </div>
+
+        <!-- Tab: Gestionar Películas -->
+        <div id="manage-tab" class="tab-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <h2>📋 Películas Actuales</h2>
+                <div>
+                    <button class="btn btn-success" onclick="loadMovies()">🔄 Recargar</button>
+                    <button class="btn btn-danger" onclick="deleteSelected()">🗑️ Eliminar Seleccionadas</button>
+                </div>
+            </div>
+            
+            <div id="moviesContainer">
+                <div class="loading">Cargando películas...</div>
+            </div>
+        </div>
+
+        <!-- Tab: Géneros -->
+        <div id="genres-tab" class="tab-content">
+            <div class="genre-manager">
+                <h3>🏷️ Gestión de Géneros</h3>
+                <p>Administra los géneros disponibles en tu sitio web.</p>
+                
+                <div class="form-group">
+                    <label for="newGenreName">Nuevo Género</label>
+                    <input type="text" id="newGenreName" placeholder="Ej: comedia, romantica, documental">
+                </div>
+                
+                <button class="btn" onclick="addNewGenre()">➕ Agregar Género</button>
+                <button class="btn btn-secondary" onclick="updateHTMLGenres()">🔄 Actualizar HTML</button>
+            </div>
+
+            <h3>Géneros Actuales:</h3>
+            <div class="genre-tags" id="genresList">
+                <!-- Se cargan dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Tab: Configuración -->
+        <div id="config-tab" class="tab-content">
+            <div class="github-config">
+                <h3>🔧 Configuración de GitHub</h3>
+                <p>Configura tu token de GitHub para actualización automática del repositorio.</p>
+                
+                <div class="form-group">
+                    <label for="githubToken">Token de GitHub</label>
+                    <input type="password" id="githubToken" placeholder="ghp_...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="githubRepo">Repositorio</label>
+                    <input type="text" id="githubRepo" placeholder="usuario/nombre-repo">
+                </div>
+                
+                <button class="btn" onclick="saveGitHubConfig()">💾 Guardar Configuración</button>
+                <button class="btn btn-secondary" onclick="testGitHubConnection()">🔍 Probar Conexión</button>
+            </div>
+
+            <div class="github-config">
+                <h3>🎬 Configuración de TMDB</h3>
+                <p>API Key para obtener información de películas automáticamente.</p>
+                
+                <div class="form-group">
+                    <label for="tmdbApiKey">API Key de TMDB</label>
+                    <input type="password" id="tmdbApiKey" placeholder="Tu API key de TMDB">
+                </div>
+                
+                <button class="btn" onclick="saveTMDBConfig()">💾 Guardar API Key</button>
+            </div>
+
+            <div class="service-detector">
+                <h3>📊 Estadísticas</h3>
+                <div id="statsContainer">
+                    <p>Total de películas: <span id="totalMovies">0</span></p>
+                    <p>Géneros activos: <span id="totalGenres">0</span></p>
+                    <p>Servicios utilizados: <span id="servicesUsed">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script>
+        // Variables globales
+        let moviesData = {};
+        let selectedMovies = new Set();
+        let availableGenres = ['estrenos', 'accion', 'drama', 'infantil', 'ficcion', 'terror'];
+
+        // Configuración
+        const config = {
+            githubToken: localStorage.getItem('githubToken') || '',
+            githubRepo: localStorage.getItem('githubRepo') || 'ibagusgi-maker/TubePlay',
+            tmdbApiKey: localStorage.getItem('tmdbApiKey') || 'f8b0f8c8c9c8f8c8c9c8f8c8c9c8f8c8'
+        };
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            loadConfig();
+            loadMovies();
+            updateGenresList();
+            
+            // Event listeners
+            document.getElementById('embedUrl').addEventListener('input', detectService);
+            document.getElementById('genre').addEventListener('change', handleGenreChange);
+            document.getElementById('movieForm').addEventListener('submit', handleSubmit);
+        });
+
+        // Gestión de tabs
+        function showTab(tabName) {
+            // Ocultar todos los tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Mostrar tab seleccionado
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+            
+            // Cargar datos específicos del tab
+            if (tabName === 'manage') {
+                loadMovies();
+            } else if (tabName === 'genres') {
+                updateGenresList();
+            } else if (tabName === 'config') {
+                updateStats();
+            }
+        }
+
+        // Detector de servicio automático
+        function detectService() {
+            const url = document.getElementById('embedUrl').value;
+            const tmdbIdField = document.getElementById('tmdbId');
+            
+            if (url.includes('vimeus.com')) {
+                // Extraer TMDB ID de Vimeus
+                const tmdbMatch = url.match(/tmdb=(\d+)/);
+                if (tmdbMatch) {
+                    tmdbIdField.value = tmdbMatch[1];
+                    showStatus('Servicio detectado: Vimeus - TMDB ID extraído automáticamente', 'info');
+                }
+            } else if (url.includes('streamtape.com')) {
+                showStatus('Servicio detectado: Streamtape', 'info');
+            } else if (url.includes('archive.org')) {
+                showStatus('Servicio detectado: Internet Archive', 'info');
+                // Intentar extraer TMDB del nombre del archivo
+                const archiveMatch = url.match(/\/([^\/]+)$/);
+                if (archiveMatch) {
+                    const filename = archiveMatch[1];
+                    const tmdbMatch = filename.match(/tmdb[_-]?(\d+)/i);
+                    if (tmdbMatch) {
+                        tmdbIdField.value = tmdbMatch[1];
+                        showStatus('TMDB ID extraído del nombre del archivo de Internet Archive', 'info');
+                    }
+                }
+            }
+        }
+
+        // Gestión de géneros
+        function handleGenreChange() {
+            const genreSelect = document.getElementById('genre');
+            const customGenreGroup = document.getElementById('customGenreGroup');
+            
+            if (genreSelect.value === 'custom') {
+                customGenreGroup.style.display = 'block';
+            } else {
+                customGenreGroup.style.display = 'none';
+            }
+        }
+
+        // Envío del formulario
+        async function handleSubmit(e) {
+            e.preventDefault();
+            
+            const formData = {
+                embedUrl: document.getElementById('embedUrl').value,
+                tmdbId: document.getElementById('tmdbId').value,
+                genre: document.getElementById('genre').value,
+                customGenre: document.getElementById('customGenre').value,
+                manualTitle: document.getElementById('manualTitle').value,
+                manualDescription: document.getElementById('manualDescription').value
+            };
+            
+            // Validar género
+            let finalGenre = formData.genre;
+            if (formData.genre === 'custom' && formData.customGenre) {
+                finalGenre = formData.customGenre.toLowerCase().replace(/\s+/g, '');
+                if (!availableGenres.includes(finalGenre)) {
+                    availableGenres.push(finalGenre);
+                    updateGenreSelect();
+                }
+            }
+            
+            showStatus('Procesando película...', 'info');
+            
+            try {
+                const movieData = await processMovie(formData, finalGenre);
+                await addMovieToJSON(movieData, finalGenre);
+                showStatus('¡Película agregada exitosamente!', 'success');
+                clearForm();
+                loadMovies(); // Recargar la lista
+            } catch (error) {
+                showStatus('Error: ' + error.message, 'error');
+            }
+        }
+
+        // Procesar película
+        async function processMovie(formData, genre) {
+            const service = detectServiceType(formData.embedUrl);
+            let movieData = {
+                embedUrl: formData.embedUrl,
+                service: service,
+                genre: genre
+            };
+            
+            // Obtener datos de TMDB si hay ID
+            if (formData.tmdbId || service === 'vimeus') {
+                const tmdbId = formData.tmdbId || extractTMDBFromVimeus(formData.embedUrl);
+                if (tmdbId) {
+                    const tmdbData = await fetchTMDBData(tmdbId);
+                    movieData = { ...movieData, ...tmdbData };
+                }
+            }
+            
+            // Sobrescribir con datos manuales si existen
+            if (formData.manualTitle) {
+                movieData.title = formData.manualTitle;
+            }
+            if (formData.manualDescription) {
+                movieData.description = formData.manualDescription;
+            }
+            
+            // Generar thumbnail según el servicio
+            if (service === 'streamtape') {
+                movieData.thumbUrl = generateStreamtapeThumb(formData.embedUrl);
+            } else if (service === 'internet_archive') {
+                movieData.thumbUrl = generateArchiveThumb(formData.embedUrl);
+            }
+            
+            // Generar ID único
+            movieData.id = generateUniqueId(service);
+            
+            return movieData;
+        }
+
+        // Detectar tipo de servicio
+        function detectServiceType(url) {
+            if (url.includes('streamtape.com')) return 'streamtape';
+            if (url.includes('vimeus.com')) return 'vimeus';
+            if (url.includes('archive.org')) return 'internet_archive';
+            return 'unknown';
+        }
+
+        // Extraer TMDB de Vimeus
+        function extractTMDBFromVimeus(url) {
+            const match = url.match(/tmdb=(\d+)/);
+            return match ? match[1] : null;
+        }
+
+        // Obtener datos de TMDB
+        async function fetchTMDBData(tmdbId) {
+            if (!config.tmdbApiKey) {
+                throw new Error('API Key de TMDB no configurada');
+            }
+            
+            const response = await fetch(`https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${config.tmdbApiKey}&language=es-ES`);
+            if (!response.ok) {
+                throw new Error('Error al obtener datos de TMDB');
+            }
+            
+            const data = await response.json();
+            return {
+                title: data.title,
+                year: new Date(data.release_date).getFullYear().toString(),
+                description: data.overview,
+                rating: data.vote_average,
+                genres: data.genres.map(g => g.name).join(', '),
+                thumbUrl: data.poster_path ? `https://image.tmdb.org/t/p/w500${data.poster_path}` : '',
+                tmdbId: tmdbId
+            };
+        }
+
+        // Generar thumbnails
+        function generateStreamtapeThumb(url) {
+            const match = url.match(/\/e\/([^\/]+)/);
+            if (match) {
+                const videoId = match[1];
+                return `https://thumb.tapecontent.net/thumb/${videoId}/${videoId.substring(0, 15)}.jpg`;
+            }
+            return '';
+        }
+
+        function generateArchiveThumb(url) {
+            // Internet Archive usa un patrón diferente para thumbnails
+            const match = url.match(/\/embed\/([^\/\?]+)/);
+            if (match) {
+                const itemId = match[1];
+                return `https://archive.org/services/img/${itemId}`;
+            }
+            return '';
+        }
+
+        // Generar ID único
+        function generateUniqueId(service) {
+            const timestamp = Date.now();
+            const random = Math.floor(Math.random() * 1000);
+            return `${service}_${timestamp}_${random}`;
+        }
+
+        // Agregar película al JSON
+        async function addMovieToJSON(movieData, genre) {
+            // Cargar datos actuales
+            await loadMoviesData();
+            
+            // Agregar nueva película
+            if (!moviesData[genre]) {
+                moviesData[genre] = [];
+            }
+            moviesData[genre].push(movieData);
+            
+            // Subir a GitHub si está configurado
+            if (config.githubToken && config.githubRepo) {
+                await uploadToGitHub();
+            } else {
+                // Mostrar JSON para copia manual
+                showJSONOutput();
+            }
+        }
+
+        // Cargar datos de películas
+        async function loadMoviesData() {
+            if (config.githubToken && config.githubRepo) {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+                        headers: {
+                            'Authorization': `token ${config.githubToken}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        const content = atob(data.content);
+                        moviesData = JSON.parse(content);
+                    } else {
+                        moviesData = createEmptyMoviesStructure();
+                    }
+                } catch (error) {
+                    console.error('Error cargando desde GitHub:', error);
+                    moviesData = createEmptyMoviesStructure();
+                }
+            } else {
+                // Intentar cargar desde archivo local
+                try {
+                    const response = await fetch('movies-v2.json');
+                    if (response.ok) {
+                        moviesData = await response.json();
+                    } else {
+                        moviesData = createEmptyMoviesStructure();
+                    }
+                } catch (error) {
+                    moviesData = createEmptyMoviesStructure();
+                }
+            }
+        }
+
+        // Crear estructura vacía
+        function createEmptyMoviesStructure() {
+            const structure = {};
+            availableGenres.forEach(genre => {
+                structure[genre] = [];
+            });
+            return structure;
+        }
+
+        // Subir a GitHub
+        async function uploadToGitHub() {
+            const jsonContent = JSON.stringify(moviesData, null, 2);
+            const encodedContent = btoa(unescape(encodeURIComponent(jsonContent)));
+            
+            // Obtener SHA actual del archivo
+            let sha = null;
+            try {
+                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+                    headers: {
+                        'Authorization': `token ${config.githubToken}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    sha = data.sha;
+                }
+            } catch (error) {
+                console.log('Archivo no existe, se creará nuevo');
+            }
+            
+            // Subir archivo
+            const uploadData = {
+                message: `Actualizar movies-v2.json - ${new Date().toLocaleString()}`,
+                content: encodedContent
+            };
+            
+            if (sha) {
+                uploadData.sha = sha;
+            }
+            
+            const uploadResponse = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `token ${config.githubToken}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(uploadData)
+            });
+            
+            if (!uploadResponse.ok) {
+                throw new Error('Error al subir a GitHub');
+            }
+        }
+
+        // Cargar películas para gestión
+        async function loadMovies() {
+            const container = document.getElementById('moviesContainer');
+            container.innerHTML = '<div class="loading">Cargando películas...</div>';
+            
+            await loadMoviesData();
+            
+            let html = '';
+            let totalMovies = 0;
+            
+            for (const [genre, movies] of Object.entries(moviesData)) {
+                if (movies.length > 0) {
+                    html += `<h3 style="color: #ff6b6b; margin: 20px 0 10px 0;">${getCategoryName(genre)} (${movies.length})</h3>`;
+                    html += '<div class="movie-grid">';
+                    
+                    movies.forEach(movie => {
+                        totalMovies++;
+                        html += createMovieCard(movie, genre);
+                    });
+                    
+                    html += '</div>';
+                }
+            }
+            
+            if (totalMovies === 0) {
+                html = '<p style="text-align: center; color: #aaa; padding: 40px;">No hay películas cargadas aún.</p>';
+            }
+            
+            container.innerHTML = html;
+        }
+
+        // Crear tarjeta de película
+        function createMovieCard(movie, genre) {
+            const movieId = `${genre}_${movie.id}`;
+            return `
+                <div class="movie-card" data-movie-id="${movieId}">
+                    <img src="${movie.thumbUrl || 'https://via.placeholder.com/300x200?text=Sin+Imagen'}" alt="${movie.title}" onerror="this.src='https://via.placeholder.com/300x200?text=Sin+Imagen'">
+                    <h3>${movie.title} ${movie.year ? `(${movie.year})` : ''}</h3>
+                    <p><strong>Género:</strong> ${getCategoryName(genre)}</p>
+                    <p><strong>Servicio:</strong> ${movie.service || 'N/A'}</p>
+                    ${movie.rating ? `<p><strong>Rating:</strong> ⭐ ${movie.rating}</p>` : ''}
+                    <p style="font-size: 0.8rem; color: #aaa;">${(movie.description || '').substring(0, 100)}${movie.description && movie.description.length > 100 ? '...' : ''}</p>
+                    <div class="movie-actions">
+                        <button class="btn" onclick="editMovie('${movieId}')">✏️ Editar</button>
+                        <button class="btn btn-danger" onclick="deleteMovie('${movieId}')">🗑️ Eliminar</button>
+                        <button class="btn btn-secondary" onclick="toggleSelect('${movieId}')">☑️ Seleccionar</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Funciones de gestión de películas
+        function editMovie(movieId) {
+            // Implementar edición de película
+            showStatus('Función de edición en desarrollo', 'info');
+        }
+
+        function deleteMovie(movieId) {
+            if (confirm('¿Estás seguro de que quieres eliminar esta película?')) {
+                const [genre, id] = movieId.split('_', 2);
+                const movieIndex = moviesData[genre].findIndex(m => m.id === id);
+                
+                if (movieIndex !== -1) {
+                    moviesData[genre].splice(movieIndex, 1);
+                    uploadToGitHub().then(() => {
+                        showStatus('Película eliminada exitosamente', 'success');
+                        loadMovies();
+                    }).catch(error => {
+                        showStatus('Error al eliminar: ' + error.message, 'error');
+                    });
+                }
+            }
+        }
+
+        function toggleSelect(movieId) {
+            if (selectedMovies.has(movieId)) {
+                selectedMovies.delete(movieId);
+            } else {
+                selectedMovies.add(movieId);
+            }
+            
+            const card = document.querySelector(`[data-movie-id="${movieId}"]`);
+            if (card) {
+                card.style.borderColor = selectedMovies.has(movieId) ? '#28a745' : 'transparent';
+            }
+        }
+
+        function deleteSelected() {
+            if (selectedMovies.size === 0) {
+                showStatus('No hay películas seleccionadas', 'error');
+                return;
+            }
+            
+            if (confirm(`¿Estás seguro de que quieres eliminar ${selectedMovies.size} película(s)?`)) {
+                selectedMovies.forEach(movieId => {
+                    const [genre, id] = movieId.split('_', 2);
+                    const movieIndex = moviesData[genre].findIndex(m => m.id === id);
+                    if (movieIndex !== -1) {
+                        moviesData[genre].splice(movieIndex, 1);
+                    }
+                });
+                
+                uploadToGitHub().then(() => {
+                    showStatus(`${selectedMovies.size} película(s) eliminada(s) exitosamente`, 'success');
+                    selectedMovies.clear();
+                    loadMovies();
+                }).catch(error => {
+                    showStatus('Error al eliminar: ' + error.message, 'error');
+                });
+            }
+        }
+
+        // Gestión de géneros
+        function updateGenresList() {
+            const container = document.getElementById('genresList');
+            container.innerHTML = '';
+            
+            availableGenres.forEach(genre => {
+                const tag = document.createElement('div');
+                tag.className = 'genre-tag';
+                tag.textContent = getCategoryName(genre);
+                tag.onclick = () => removeGenre(genre);
+                container.appendChild(tag);
+            });
+        }
+
+        function addNewGenre() {
+            const newGenreName = document.getElementById('newGenreName').value.trim();
+            if (newGenreName && !availableGenres.includes(newGenreName.toLowerCase())) {
+                const genreKey = newGenreName.toLowerCase().replace(/\s+/g, '');
+                availableGenres.push(genreKey);
+                updateGenresList();
+                updateGenreSelect();
+                document.getElementById('newGenreName').value = '';
+                showStatus(`Género "${newGenreName}" agregado`, 'success');
+            }
+        }
+
+        function removeGenre(genre) {
+            if (confirm(`¿Eliminar el género "${getCategoryName(genre)}"? Esto también eliminará todas las películas de este género.`)) {
+                availableGenres = availableGenres.filter(g => g !== genre);
+                if (moviesData[genre]) {
+                    delete moviesData[genre];
+                }
+                updateGenresList();
+                updateGenreSelect();
+                showStatus(`Género eliminado`, 'success');
+            }
+        }
+
+        function updateGenreSelect() {
+            const select = document.getElementById('genre');
+            const currentValue = select.value;
+            
+            // Limpiar opciones actuales (excepto la primera y la última)
+            while (select.children.length > 2) {
+                select.removeChild(select.children[select.children.length - 2]);
+            }
+            
+            // Agregar géneros actualizados
+            availableGenres.forEach(genre => {
+                const option = document.createElement('option');
+                option.value = genre;
+                option.textContent = getCategoryName(genre);
+                select.insertBefore(option, select.lastElementChild);
+            });
+            
+            // Restaurar valor si aún existe
+            if (availableGenres.includes(currentValue)) {
+                select.value = currentValue;
+            }
+        }
+
+        // Configuración
+        function loadConfig() {
+            document.getElementById('githubToken').value = config.githubToken;
+            document.getElementById('githubRepo').value = config.githubRepo;
+            document.getElementById('tmdbApiKey').value = config.tmdbApiKey;
+        }
+
+        function saveGitHubConfig() {
+            config.githubToken = document.getElementById('githubToken').value;
+            config.githubRepo = document.getElementById('githubRepo').value;
+            
+            localStorage.setItem('githubToken', config.githubToken);
+            localStorage.setItem('githubRepo', config.githubRepo);
+            
+            showStatus('Configuración de GitHub guardada', 'success');
+        }
+
+        function saveTMDBConfig() {
+            config.tmdbApiKey = document.getElementById('tmdbApiKey').value;
+            localStorage.setItem('tmdbApiKey', config.tmdbApiKey);
+            showStatus('API Key de TMDB guardada', 'success');
+        }
+
+        async function testGitHubConnection() {
+            if (!config.githubToken || !config.githubRepo) {
+                showStatus('Configura primero el token y repositorio', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}`, {
+                    headers: {
+                        'Authorization': `token ${config.githubToken}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    showStatus('✅ Conexión con GitHub exitosa', 'success');
+                } else {
+                    showStatus('❌ Error de conexión con GitHub', 'error');
+                }
+            } catch (error) {
+                showStatus('❌ Error de red: ' + error.message, 'error');
+            }
+        }
+
+        function updateStats() {
+            loadMoviesData().then(() => {
+                let totalMovies = 0;
+                let servicesUsed = new Set();
+                
+                Object.values(moviesData).forEach(movies => {
+                    totalMovies += movies.length;
+                    movies.forEach(movie => {
+                        if (movie.service) {
+                            servicesUsed.add(movie.service);
+                        }
+                    });
+                });
+                
+                document.getElementById('totalMovies').textContent = totalMovies;
+                document.getElementById('totalGenres').textContent = availableGenres.length;
+                document.getElementById('servicesUsed').textContent = servicesUsed.size;
+            });
+        }
+
+        // Utilidades
+        function getCategoryName(categoryId) {
+            const names = {
+                'estrenos': 'Estrenos',
+                'accion': 'Acción',
+                'drama': 'Drama',
+                'infantil': 'Infantil',
+                'ficcion': 'Ficción',
+                'terror': 'Terror'
+            };
+            return names[categoryId] || categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
+        }
+
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 5000);
+        }
+
+        function clearForm() {
+            document.getElementById('movieForm').reset();
+            document.getElementById('customGenreGroup').style.display = 'none';
+        }
+
+        function showJSONOutput() {
+            const jsonContent = JSON.stringify(moviesData, null, 2);
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                    <head><title>movies-v2.json</title></head>
+                    <body style="font-family: monospace; padding: 20px; background: #1a1a1a; color: #fff;">
+                        <h2>Copia este contenido a tu archivo movies-v2.json:</h2>
+                        <textarea style="width: 100%; height: 400px; background: #333; color: #fff; border: 1px solid #555; padding: 10px;">${jsonContent}</textarea>
+                        <br><br>
+                        <button onclick="navigator.clipboard.writeText(document.querySelector('textarea').value)">Copiar al Portapapeles</button>
+                    </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>
