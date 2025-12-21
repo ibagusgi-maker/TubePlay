@@ -340,18 +340,20 @@ body {
 
 .movies-container {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding-right: 0.5rem;
     /* Ocultar scrollbar pero mantener funcionalidad */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
-    /* Asegurar que el scroll funcione con mouse wheel */
     scroll-behavior: smooth;
+    /* Forzar que el contenedor sea scrolleable */
+    max-height: 400px;
 }
 
 /* Ocultar scrollbar en WebKit browsers (Chrome, Safari, Edge) */
 .movies-container::-webkit-scrollbar {
-    display: none;
+    width: 0px;
+    background: transparent;
 }
 
 .movie-item {
