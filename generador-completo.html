@@ -726,7 +726,7 @@
         async function loadMoviesData() {
             if (config.githubToken && config.githubRepo) {
                 try {
-                    const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+                    const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
                         headers: {
                             'Authorization': `token ${config.githubToken}`,
                             'Accept': 'application/vnd.github.v3+json'
@@ -747,7 +747,7 @@
             } else {
                 // Intentar cargar desde archivo local
                 try {
-                    const response = await fetch('movies-v2.json');
+                    const response = await fetch('movies.json');
                     if (response.ok) {
                         moviesData = await response.json();
                     } else {
@@ -776,7 +776,7 @@
             // Obtener SHA actual del archivo
             let sha = null;
             try {
-                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+                const response = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
                     headers: {
                         'Authorization': `token ${config.githubToken}`,
                         'Accept': 'application/vnd.github.v3+json'
@@ -793,7 +793,7 @@
             
             // Subir archivo
             const uploadData = {
-                message: `Actualizar movies-v2.json - ${new Date().toLocaleString()}`,
+                message: `Actualizar movies.json - ${new Date().toLocaleString()}`,
                 content: encodedContent
             };
             
@@ -801,7 +801,7 @@
                 uploadData.sha = sha;
             }
             
-            const uploadResponse = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies-v2.json`, {
+            const uploadResponse = await fetch(`https://api.github.com/repos/${config.githubRepo}/contents/movies.json`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `token ${config.githubToken}`,
@@ -1090,9 +1090,9 @@
             const newWindow = window.open('', '_blank');
             newWindow.document.write(`
                 <html>
-                    <head><title>movies-v2.json</title></head>
+                    <head><title>movies.json</title></head>
                     <body style="font-family: monospace; padding: 20px; background: #1a1a1a; color: #fff;">
-                        <h2>Copia este contenido a tu archivo movies-v2.json:</h2>
+                        <h2>Copia este contenido a tu archivo movies.json:</h2>
                         <textarea style="width: 100%; height: 400px; background: #333; color: #fff; border: 1px solid #555; padding: 10px;">${jsonContent}</textarea>
                         <br><br>
                         <button onclick="navigator.clipboard.writeText(document.querySelector('textarea').value)">Copiar al Portapapeles</button>
