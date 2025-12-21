@@ -4,13 +4,25 @@
       "id": "tmdb_31743_1766276500521",
       "title": "Hachiko",
       "year": "1987",
-      "embedUrl": "https://streamtape.com/e/BaV4PYz8ZJuyAzg/",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/d2kXnywmFkhy8gcKCo7nHsmxXnE.jpg",
       "description": "Basada en un hecho real. Hachiko es un perro de raza akita que es adquirido por el profesor Ueno, docente en la Facultad de Ingeniería Agrónoma de la Universidad de Tokio. Todas las mañanas, Hachiko acompaña a su amo hasta la estación de Shibuya, donde éste coge el tren para ir a su trabajo. Por las tardes, Hachiko regresa a Shibuya y espera a su amo a la puerta de la estación. Un día el profesor Ueno sufre un ataque cardíaco en el aula y fallece en el acto, y Hachiko acude día tras día a la estación para esperar a un amo que ya nunca más volverá.",
       "rating": 7.8,
       "genres": "",
       "tmdbId": "31743",
       "service": "tmdb-search"
+    },
+    {
+      "id": "vimeus_1107387_1766242054375",
+      "title": "Hachiko",
+      "year": "2023",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1107387&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/sT5SHjXlrKZwSbcvi70dmoDEHms.jpg",
+      "description": "Hachiko (Batong) es un lindo perro pastor chino. Conoce a su dueÃÂ±o Chen Jingxiu entre la gran multitud y se convierte en miembro de la familia Chen. Con el paso del tiempo, la casa que alguna vez fue hermosa ya no estÃÂ¡ allÃÂ­, pero Batong espera y espera, sabiendo que su destino estÃÂ¡ estrechamente ligado a su familia.",
+      "rating": 7.926,
+      "genres": "Drama, Familia",
+      "tmdbId": "1107387",
+      "service": "vimeus"
     },
     {
       "id": "tmdb_335977_1766147955639",
@@ -245,7 +257,7 @@
       "id": "tmdb_31743_1766276540723",
       "title": "Hachiko",
       "year": "1987",
-      "embedUrl": "https://streamtape.com/e/BaV4PYz8ZJuyAzg/",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/d2kXnywmFkhy8gcKCo7nHsmxXnE.jpg",
       "description": "Basada en un hecho real. Hachiko es un perro de raza akita que es adquirido por el profesor Ueno, docente en la Facultad de Ingeniería Agrónoma de la Universidad de Tokio. Todas las mañanas, Hachiko acompaña a su amo hasta la estación de Shibuya, donde éste coge el tren para ir a su trabajo. Por las tardes, Hachiko regresa a Shibuya y espera a su amo a la puerta de la estación. Un día el profesor Ueno sufre un ataque cardíaco en el aula y fallece en el acto, y Hachiko acude día tras día a la estación para esperar a un amo que ya nunca más volverá.",
       "rating": 7.8,
@@ -263,6 +275,18 @@
       "rating": 0,
       "genres": "",
       "service": "streamtape"
+    },
+    {
+      "id": "vimeus_1107387_1766242037531",
+      "title": "Hachiko",
+      "year": "2023",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1107387&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/sT5SHjXlrKZwSbcvi70dmoDEHms.jpg",
+      "description": "Hachiko (Batong) es un lindo perro pastor chino. Conoce a su dueÃÂ±o Chen Jingxiu entre la gran multitud y se convierte en miembro de la familia Chen. Con el paso del tiempo, la casa que alguna vez fue hermosa ya no estÃÂ¡ allÃÂ­, pero Batong espera y espera, sabiendo que su destino estÃÂ¡ estrechamente ligado a su familia.",
+      "rating": 7.926,
+      "genres": "Drama, Familia",
+      "tmdbId": "1107387",
+      "service": "vimeus"
     },
     {
       "id": "vimeus_28178_1766241985041",
@@ -291,6 +315,18 @@
     }
   ],
   "ficcion": [
+    {
+      "id": "tmdb_1086495_1766277198266",
+      "title": "Project Genesis",
+      "year": "2024",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/k0RzeCiMnSY5nTj5oOA0MK3r3VM.jpg",
+      "description": "Stella, científica y madre soltera, regresa a su ciudad natal tras años de ausencia. Una noche, recibe una misteriosa transmisión en una vieja radio: es su padre, desaparecido hace décadas y ahora atrapado en el espacio en una configuración temporal alternativa. Para rescatarlo, Stella debe localizar la \"Máquina Génesis\", una reliquia de un proyecto clasificado de la CIA escondida en algún lugar de Tailandia. Su búsqueda la lanza a un viaje caleidoscópico a través del tiempo y el espacio que la enfrentará a bestias prehistóricas, tribus ancestrales, criaturas mutantes y a los límites de la propia realidad.",
+      "rating": 6.25,
+      "genres": "",
+      "tmdbId": "1086495",
+      "service": "tmdb-search"
+    },
     {
       "id": "streamtape_eGwgvJRBmmCY147_1766275467941",
       "title": "Aliens vs. Cowboys",
