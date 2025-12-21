@@ -1,6 +1,20 @@
 // Variables globales
 let moviesData = {};
 let currentCategory = 'estrenos';
+let currentMovieUrl = '';
+let isPlaying = false;
+
+// Función para iniciar reproducción
+function startPlayback() {
+    if (currentMovieUrl) {
+        document.getElementById('mainPlayer').src = currentMovieUrl;
+        document.getElementById('mainPlayer').classList.add('active');
+        document.getElementById('posterOverlay').style.display = 'none';
+        document.getElementById('moviePoster').style.display = 'none';
+        document.getElementById('movieInfoOverlay').style.display = 'none';
+        isPlaying = true;
+    }
+}
 
 // Cargar datos de películas al iniciar
 document.addEventListener('DOMContentLoaded', async () => {
@@ -11,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar datos desde movies.json
 async function loadMoviesData() {
     try {
-        const response = await fetch('movies.json');
+        const response = await fetch('movies-v2.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar movies.json');
         }
@@ -20,7 +34,7 @@ async function loadMoviesData() {
     } catch (error) {
         console.error('Error cargando películas:', error);
         document.getElementById('categoriesContainer').innerHTML = 
-            '<div class="error">❌ Error cargando películas. Verifica que movies.json existe.</div>';
+            '<div class="error">❌ Error cargando películas. Verifica que movies-v2.json existe.</div>';
     }
 }
 
@@ -61,11 +75,12 @@ function generateCategoryHTML(categoryId) {
     let html = `
         <div class="category-section">
             <div class="category-title">${getCategoryIcon(categoryId)} ${getCategoryName(categoryId)}</div>
+            <div class="movies-container">
     `;
     
     // Mostrar primeras películas
-    const initialMovies = movies.slice(0, 6);
-    const moreMovies = movies.slice(6);
+    const initialMovies = movies.slice(0, 8);
+    const moreMovies = movies.slice(8);
     
     initialMovies.forEach((movie, index) => {
         const isFirst = index === 0;
@@ -92,47 +107,13 @@ function generateCategoryHTML(categoryId) {
         `;
     }
     
-    html += '</div>';
+    html += '</div></div>';
     container.innerHTML = html;
     
     // Cargar automáticamente la primera película
     if (movies.length > 0) {
         const firstMovie = movies[0];
-        const displayTitle = firstMovie.year ? `${firstMovie.title} (${firstMovie.year})` : firstMovie.title;
-        
-        // Actualizar reproductor
-        document.getElementById('mainPlayer').src = firstMovie.embedUrl;
-        document.getElementById('movieTitle').textContent = displayTitle;
-        
-        // Actualizar metadatos
-        const metaElement = document.getElementById('movieMeta');
-        const descElement = document.getElementById('movieDescription');
-        
-        let metaHTML = '';
-        if (firstMovie.year) {
-            metaHTML += `<span>📅 ${firstMovie.year}</span>`;
-        }
-        if (firstMovie.genres || firstMovie.genre) {
-            metaHTML += `<span>🎭 ${firstMovie.genres || firstMovie.genre}</span>`;
-        }
-        if (firstMovie.rating && firstMovie.rating > 0) {
-            metaHTML += `<span class="movie-rating">⭐ ${firstMovie.rating.toFixed(1)}</span>`;
-        }
-        
-        if (metaHTML) {
-            metaElement.innerHTML = metaHTML;
-            metaElement.style.display = 'flex';
-        } else {
-            metaElement.style.display = 'none';
-        }
-        
-        // Actualizar descripción
-        if (firstMovie.description && firstMovie.description.trim() !== '') {
-            descElement.textContent = firstMovie.description;
-            descElement.style.display = 'block';
-        } else {
-            descElement.style.display = 'none';
-        }
+        loadMoviePoster(firstMovie);
         
         // Marcar como activa la primera película
         setTimeout(() => {
@@ -141,6 +122,79 @@ function generateCategoryHTML(categoryId) {
                 firstMovieElement.classList.add('active');
             }
         }, 100);
+    }
+}
+
+// Función para cargar poster de película
+function loadMoviePoster(movie) {
+    const displayTitle = movie.year ? `${movie.title} (${movie.year})` : movie.title;
+    
+    // Resetear estado de reproducción
+    isPlaying = false;
+    currentMovieUrl = movie.embedUrl;
+    
+    // Mostrar poster
+    const posterImg = document.getElementById('moviePoster');
+    const posterOverlay = document.getElementById('posterOverlay');
+    const iframe = document.getElementById('mainPlayer');
+    const infoOverlay = document.getElementById('movieInfoOverlay');
+    
+    posterImg.src = movie.thumbUrl || '';
+    posterImg.style.display = 'block';
+    posterOverlay.style.display = 'flex';
+    iframe.classList.remove('active');
+    iframe.src = 'about:blank';
+    infoOverlay.style.display = 'block';
+    
+    // Actualizar información en overlay
+    document.getElementById('overlayTitle').textContent = movie.title;
+    
+    const overlayMeta = document.getElementById('overlayMeta');
+    const overlayDesc = document.getElementById('overlayDescription');
+    
+    let metaHTML = '';
+    if (movie.year) {
+        metaHTML += `<span>📅 ${movie.year}</span>`;
+    }
+    if (movie.genres || movie.genre) {
+        metaHTML += `<span>🎭 ${movie.genres || movie.genre}</span>`;
+    }
+    if (movie.rating && movie.rating > 0) {
+        metaHTML += `<span class="movie-rating">⭐ ${movie.rating.toFixed(1)}</span>`;
+    }
+    
+    if (metaHTML) {
+        overlayMeta.innerHTML = metaHTML;
+        overlayMeta.style.display = 'flex';
+    } else {
+        overlayMeta.style.display = 'none';
+    }
+    
+    // Actualizar descripción
+    if (movie.description && movie.description.trim() !== '') {
+        overlayDesc.textContent = movie.description;
+        overlayDesc.style.display = 'block';
+    } else {
+        overlayDesc.style.display = 'none';
+    }
+    
+    // Actualizar detalles adicionales
+    document.getElementById('movieTitle').textContent = displayTitle;
+    const metaElement = document.getElementById('movieMeta');
+    const descElement = document.getElementById('movieDescription');
+    
+    if (metaHTML) {
+        metaElement.innerHTML = metaHTML;
+        metaElement.style.display = 'flex';
+    } else {
+        metaElement.style.display = 'none';
+    }
+    
+    if (movie.description && movie.description.trim() !== '') {
+        descElement.textContent = movie.description;
+        descElement.style.display = 'block';
+    } else {
+        descElement.style.display = 'none';
     }
 }
 
@@ -197,39 +251,17 @@ function createSubtitle(movie) {
 
 // Función para reproducir película
 function playMovie(url, title, element, movieData = {}) {
-    // Actualizar reproductor
-    document.getElementById('mainPlayer').src = url;
-    document.getElementById('movieTitle').textContent = title;
+    // Encontrar datos completos de la película
+    const allMovies = Object.values(moviesData).flat();
+    const fullMovie = allMovies.find(m => m.embedUrl === url) || {
+        title: title,
+        embedUrl: url,
+        thumbUrl: '',
+        ...movieData
+    };
     
-    // Actualizar metadatos
-    const metaElement = document.getElementById('movieMeta');
-    const descElement = document.getElementById('movieDescription');
-    
-    let metaHTML = '';
-    if (movieData.year) {
-        metaHTML += `<span>📅 ${movieData.year}</span>`;
-    }
-    if (movieData.genre) {
-        metaHTML += `<span>🎭 ${movieData.genre}</span>`;
-    }
-    if (movieData.rating && movieData.rating > 0) {
-        metaHTML += `<span class="movie-rating">⭐ ${movieData.rating.toFixed(1)}</span>`;
-    }
-    
-    if (metaHTML) {
-        metaElement.innerHTML = metaHTML;
-        metaElement.style.display = 'flex';
-    } else {
-        metaElement.style.display = 'none';
-    }
-    
-    // Actualizar descripción
-    if (movieData.description && movieData.description.trim() !== '') {
-        descElement.textContent = movieData.description;
-        descElement.style.display = 'block';
-    } else {
-        descElement.style.display = 'none';
-    }
+    // Cargar poster
+    loadMoviePoster(fullMovie);
     
     // Actualizar estado activo
     document.querySelectorAll('.movie-item').forEach(item => {
@@ -292,5 +324,4 @@ document.addEventListener('keydown', (e) => {
             section.classList.remove('show');
         });
     }
-
 });
