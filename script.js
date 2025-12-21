@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Función para cargar datos desde movies.json
 async function loadMoviesData() {
     try {
-        const response = await fetch('movies.json');
+        const response = await fetch('movies-v2.json');
         if (!response.ok) {
             throw new Error('No se pudo cargar movies.json');
         }
@@ -67,8 +67,9 @@ function generateCategoryHTML(categoryId) {
     const initialMovies = movies.slice(0, 6);
     const moreMovies = movies.slice(6);
     
-    initialMovies.forEach(movie => {
-        html += generateMovieItemHTML(movie);
+    initialMovies.forEach((movie, index) => {
+        const isFirst = index === 0;
+        html += generateMovieItemHTML(movie, isFirst);
     });
     
     // Sección "Ver más" si hay más películas
@@ -78,7 +79,7 @@ function generateCategoryHTML(categoryId) {
         `;
         
         moreMovies.forEach(movie => {
-            html += generateMovieItemHTML(movie);
+            html += generateMovieItemHTML(movie, false);
         });
         
         html += `
@@ -93,10 +94,58 @@ function generateCategoryHTML(categoryId) {
     
     html += '</div>';
     container.innerHTML = html;
+    
+    // Cargar automáticamente la primera película
+    if (movies.length > 0) {
+        const firstMovie = movies[0];
+        const displayTitle = firstMovie.year ? `${firstMovie.title} (${firstMovie.year})` : firstMovie.title;
+        
+        // Actualizar reproductor
+        document.getElementById('mainPlayer').src = firstMovie.embedUrl;
+        document.getElementById('movieTitle').textContent = displayTitle;
+        
+        // Actualizar metadatos
+        const metaElement = document.getElementById('movieMeta');
+        const descElement = document.getElementById('movieDescription');
+        
+        let metaHTML = '';
+        if (firstMovie.year) {
+            metaHTML += `<span>📅 ${firstMovie.year}</span>`;
+        }
+        if (firstMovie.genres || firstMovie.genre) {
+            metaHTML += `<span>🎭 ${firstMovie.genres || firstMovie.genre}</span>`;
+        }
+        if (firstMovie.rating && firstMovie.rating > 0) {
+            metaHTML += `<span class="movie-rating">⭐ ${firstMovie.rating.toFixed(1)}</span>`;
+        }
+        
+        if (metaHTML) {
+            metaElement.innerHTML = metaHTML;
+            metaElement.style.display = 'flex';
+        } else {
+            metaElement.style.display = 'none';
+        }
+        
+        // Actualizar descripción
+        if (firstMovie.description && firstMovie.description.trim() !== '') {
+            descElement.textContent = firstMovie.description;
+            descElement.style.display = 'block';
+        } else {
+            descElement.style.display = 'none';
+        }
+        
+        // Marcar como activa la primera película
+        setTimeout(() => {
+            const firstMovieElement = document.querySelector('.movie-item');
+            if (firstMovieElement) {
+                firstMovieElement.classList.add('active');
+            }
+        }, 100);
+    }
 }
 
 // Función para generar HTML de un item de película
-function generateMovieItemHTML(movie) {
+function generateMovieItemHTML(movie, isFirst = false) {
     const displayTitle = movie.year ? `${movie.title} (${movie.year})` : movie.title;
     const subtitle = createSubtitle(movie);
     
@@ -122,8 +171,10 @@ function generateMovieItemHTML(movie) {
         `;
     }
     
+    const activeClass = isFirst ? ' active' : '';
+    
     return `
-        <div class="movie-item" onclick="playMovie('${movie.embedUrl}', '${displayTitle.replace(/'/g, "\\'")}', this, JSON.parse('${movieDataStr}'))" title="${movie.description || ''}">
+        <div class="movie-item${activeClass}" onclick="playMovie('${movie.embedUrl}', '${displayTitle.replace(/'/g, "\\'")}', this, JSON.parse('${movieDataStr}'))" title="${movie.description || ''}">
             ${thumbHTML}
             <div class="movie-info">
                 <h4>${movie.title}</h4>
@@ -241,5 +292,4 @@ document.addEventListener('keydown', (e) => {
             section.classList.remove('show');
         });
     }
-
 });
