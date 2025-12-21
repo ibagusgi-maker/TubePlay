@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "tmdb_31743_1766276500521",
+      "title": "Hachiko",
+      "year": "1987",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/d2kXnywmFkhy8gcKCo7nHsmxXnE.jpg",
+      "description": "Basada en un hecho real. Hachiko es un perro de raza akita que es adquirido por el profesor Ueno, docente en la Facultad de Ingeniería Agrónoma de la Universidad de Tokio. Todas las mañanas, Hachiko acompaña a su amo hasta la estación de Shibuya, donde éste coge el tren para ir a su trabajo. Por las tardes, Hachiko regresa a Shibuya y espera a su amo a la puerta de la estación. Un día el profesor Ueno sufre un ataque cardíaco en el aula y fallece en el acto, y Hachiko acude día tras día a la estación para esperar a un amo que ya nunca más volverá.",
+      "rating": 7.8,
+      "genres": "",
+      "tmdbId": "31743",
+      "service": "tmdb-search"
+    },
+    {
       "id": "vimeus_1107387_1766242054375",
       "title": "Hachiko",
       "year": "2023",
@@ -294,11 +306,22 @@
     {
       "id": "streamtape_eGwgvJRBmmCY147_1766275467941",
       "title": "Aliens vs. Cowboys",
-      "year": "2011",
+      "year": "",
       "embedUrl": "https://streamtape.com/e/eGwgvJRBmmCY147/Aliens_vs._Cowboys.mp4",
-      "thumbUrl": "https://www.originalfilmart.com/cdn/shop/products/CowboysandAliens_2011_teaser_original_film_art_5000x.jpg?v=1585745223",
-      "description": "Arizona, 1873. Un extraño, que no recuerda su pasado, acaba por casualidad en el duro y desertico pueblo de Absolution. Pronto descubre que los forasteros no son bienvenidos y que nadie mueve un dedo en sus calles sin que se lo ordene el Coronel Mano de hierro Dolarhyde Ford. Pero Absolution estÃ¡ a punto de experimentar un panico incompresible cuando la desolada ciudad es atacada por unos maleantes desde el cielo. Ahora, el extraÃ±o que rechazaban es su Ãºnica esperanza de salvacion. Este pistolero, se da cuenta de que tiene un secreto que puede darle al pueblo una oportunidad para enfrentarse a los alienÃ­genas. Con la ayuda de la escurridiza viajera Ella, logran reunir a un grupo de antiguos rivales: los ciudadanos, Dolarhyde y sus chicos, los bandidos y los guerreros apache, todos ellos en peligro de ser aniquilados. Unidos contra un enemigo comÃºn, se prepararÃ¡n para un Ã©pico enfrentamiento por la supervivencia.",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/eGwgvJRBmmCY147/xq4O1jvKzeukaoO.jpg",
+      "description": "",
       "rating": 0,
+      "genres": "",
+      "service": "streamtape"
+    },
+    {
+      "id": "streamtape_eGwgvJRBmmCY147_1766271573360",
+      "title": "Aliens vs. Cowboys",
+      "year": "2011",
+      "embedUrl": "https://streamtape.com/e/eGwgvJRBmmCY147/ALIENS_VS_COMBOY.mp4",
+      "thumbUrl": "https://www.originalfilmart.com/cdn/shop/products/CowboysandAliens_2011_teaser_original_film_art_5000x.jpg?v=1585745223",
+      "description": "Arizona, 1873. Un extraÃ±o, que no recuerda su pasado, acaba por casualidad en el duro y desÃ©rtico pueblo de Absolution. Pronto descubre que los forasteros no son bienvenidos y que nadie mueve un dedo en sus calles sin que se lo ordene el Coronel \"Mano de hierro\" Dolarhyde Ford. Pero Absolution estÃ¡ a punto de experimentar un pÃ¡nico incompresible cuando la desolada ciudad es atacada por unos maleantes desde el cielo. Ahora, el extraÃ±o que rechazaban es su Ãºnica esperanza de salvaciÃ³n. Este pistolero, se da cuenta de que tiene un secreto que puede darle al pueblo una oportunidad para enfrentarse a los alienÃ­genas. Con la ayuda de la escurridiza viajera Ella, logran reunir a un grupo de antiguos rivales: los ciudadanos, Dolarhyde y sus chicos, los bandidos y los guerreros apache, todos ellos en peligro de ser aniquilados. Unidos contra un enemigo comÃºn, se prepararÃ¡n para un Ã©pico enfrentamiento por la supervivencia.",
+      "rating": 5.637,
       "genres": "",
       "service": "streamtape"
     },
@@ -306,9 +329,9 @@
       "id": "tmdb_18_1766268047735",
       "title": "El quinto elemento",
       "year": "1997",
-      "embedUrl": "https://streamtape.com/e/GGyM34a47kHol3/",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/wnps5IL8YpeJpZvciDRXt7yZF8a.jpg",
-      "description": "Cada 5.000 años se abre una puerta entre las dimensiones. En una dimensiÃ³n existe el Universo y la vida. En la otra dimensiÃ³n existe un elemento que no estÃ¡ hecho ni de tierra, ni de fuego, ni de aire, ni de agua, sino que es una anti-energÃ­a, la anti-vida: es el quinto elemento.",
+      "description": "Cada 5.000 aÃ±os se abre una puerta entre las dimensiones. En una dimensiÃ³n existe el Universo y la vida. En la otra dimensiÃ³n existe un elemento que no estÃ¡ hecho ni de tierra, ni de fuego, ni de aire, ni de agua, sino que es una anti-energÃ­a, la anti-vida: es el quinto elemento.",
       "rating": 7.561,
       "genres": "",
       "tmdbId": "18",
@@ -360,6 +383,18 @@
       "rating": 7.271,
       "genres": "AcciÃÂ³n, Aventura, Ciencia ficciÃÂ³n",
       "tmdbId": "99861",
+      "service": "vimeus"
+    },
+    {
+      "id": "vimeus_49849_1766241070763",
+      "title": "Cowboys & Aliens",
+      "year": "2011",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=49849&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/5MrKD5qkFA9sWxP0V2Y793koZYG.jpg",
+      "description": "Arizona, 1873. Un extraÃÂ±o, que no recuerda su pasado, acaba por casualidad en el duro y desÃÂ©rtico pueblo de Absolution. Pronto descubre que los forasteros no son bienvenidos y que nadie mueve un dedo en sus calles sin que se lo ordene el Coronel \"Mano de hierro\" Dolarhyde Ford. Pero Absolution estÃÂ¡ a punto de experimentar un pÃÂ¡nico incompresible cuando la desolada ciudad es atacada por unos maleantes desde el cielo. Ahora, el extraÃÂ±o que rechazaban es su ÃÂºnica esperanza de salvaciÃÂ³n. Este pistolero, se da cuenta de que tiene un secreto que puede darle al pueblo una oportunidad para enfrentarse a los alienÃÂ­genas. Con la ayuda de la escurridiza viajera Ella, logran reunir a un grupo de antiguos rivales: los ciudadanos, Dolarhyde y sus chicos, los bandidos y los guerreros apache, todos ellos en peligro de ser aniquilados. Unidos contra un enemigo comÃÂºn, se prepararÃÂ¡n para un ÃÂ©pico enfrentamiento por la supervivencia.",
+      "rating": 5.637,
+      "genres": "AcciÃÂ³n, Ciencia ficciÃÂ³n, Suspense, Western",
+      "tmdbId": "49849",
       "service": "vimeus"
     },
     {
