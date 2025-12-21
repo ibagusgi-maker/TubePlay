@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTube v2 - Películas Online</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
     <!-- Header con Navegación -->
     <header class="header">
         <div class="nav-container">
-            <a href="#" class="logo">🎬 CineTube</a>
+            <a href="#" class="logo">🎬 CineTube v2</a>
             <nav>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -41,15 +41,17 @@
         <div class="main-player">
             <!-- Detalles de la película -->
             <div class="movie-details" id="movieDetails">
-                <h2 class="movie-title" id="movieTitle">Selecciona una película</h2>
-                <div class="movie-meta" id="movieMeta" style="display: none;">
-                    <span>📅 2025</span>
-                    <span>🎭 Acción</span>
-                    <span class="movie-rating">⭐ 7.2</span>
+                <div class="movie-details-content">
+                    <h2 class="movie-title" id="movieTitle">Selecciona una película</h2>
+                    <div class="movie-meta" id="movieMeta" style="display: none;">
+                        <span>📅 2025</span>
+                        <span>🎭 Acción</span>
+                        <span class="movie-rating">⭐ 7.2</span>
+                    </div>
+                    <p class="movie-description" id="movieDescription" style="display: none;">
+                        Selecciona una película de la lista para ver su descripción y reproducirla.
+                    </p>
                 </div>
-                <p class="movie-description" id="movieDescription" style="display: none;">
-                    Selecciona una película de la lista para ver su descripción y reproducirla.
-                </p>
             </div>
             
             <!-- Reproductor -->
@@ -69,7 +71,6 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="script-v2.js"></script>
 </body>
-
 </html>
