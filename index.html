@@ -39,26 +39,42 @@
     <!-- Contenedor Principal -->
     <div class="main-container">
         <div class="main-player">
-            <!-- Detalles de la película -->
+            <!-- Contenedor del reproductor con poster -->
+            <div class="player-container" id="playerContainer">
+                <img class="movie-poster" id="moviePoster" src="" alt="Movie Poster">
+                <div class="poster-overlay" id="posterOverlay">
+                    <button class="play-button" id="playButton" onclick="startPlayback()">
+                        ▶
+                    </button>
+                </div>
+                <div class="movie-info-overlay" id="movieInfoOverlay">
+                    <h2 class="overlay-title" id="overlayTitle">Selecciona una película</h2>
+                    <div class="overlay-meta" id="overlayMeta" style="display: none;">
+                        <span>📅 2025</span>
+                        <span>🎭 Acción</span>
+                        <span class="movie-rating">⭐ 7.2</span>
+                    </div>
+                    <p class="overlay-description" id="overlayDescription" style="display: none;">
+                        Selecciona una película de la lista para ver su descripción.
+                    </p>
+                </div>
+                <iframe id="mainPlayer" src="about:blank" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+            </div>
+            
+            <!-- Detalles adicionales debajo -->
             <div class="movie-details" id="movieDetails">
                 <div class="movie-details-content">
-                    <h2 class="movie-title" id="movieTitle">Selecciona una película</h2>
+                    <h2 class="movie-title" id="movieTitle">Información adicional</h2>
                     <div class="movie-meta" id="movieMeta" style="display: none;">
                         <span>📅 2025</span>
                         <span>🎭 Acción</span>
                         <span class="movie-rating">⭐ 7.2</span>
                     </div>
                     <p class="movie-description" id="movieDescription" style="display: none;">
-                        Selecciona una película de la lista para ver su descripción y reproducirla.
+                        Detalles adicionales de la película aparecerán aquí.
                     </p>
                 </div>
             </div>
-            
-            <!-- Reproductor -->
-            <iframe id="mainPlayer" 
-                    src="about:blank" 
-                    allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0">
-            </iframe>
         </div>
         
         <div class="playlist">
@@ -73,5 +89,4 @@
     
     <script src="script.js"></script>
 </body>
-
 </html>
