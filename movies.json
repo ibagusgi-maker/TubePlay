@@ -8,20 +8,8 @@
       "thumbUrl": "https://m.media-amazon.com/images/M/MV5BYmQ1Yjk5NDgtMzJkNy00NWE0LWExYWYtMWI2MmU3MTM3YzllXkEyXkFqcGc@._V1_.jpg",
       "description": "",
       "rating": 0,
-      "genres": "",
+      "genres": "Stella, científica y madre soltera, regresa a su ciudad natal tras años de ausencia. Una noche, recibe una misteriosa transmisión en una vieja radio: es su padre, desaparecido hace décadas y ahora atrapado en el espacio en una configuración temporal alternativa. Para rescatarlo, Stella debe localizar la \"Máquina Génesis\", una reliquia de un proyecto clasificado de la CIA escondida en algún lugar de Tailandia. Su búsqueda la lanza a un viaje caleidoscópico a través del tiempo y el espacio que la enfrentará a bestias prehistóricas, tribus ancestrales, criaturas mutantes y a los límites de la propia realidad.",
       "service": "streamtape"
-    },
-    {
-      "id": "tmdb_1086495_1766277243787",
-      "title": "Project Genesis",
-      "year": "2024",
-      "embedUrl": "https://streamtape.com/e/brYvrr7kDrhPawY/",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/k0RzeCiMnSY5nTj5oOA0MK3r3VM.jpg",
-      "description": "Stella, científica y madre soltera, regresa a su ciudad natal tras años de ausencia. Una noche, recibe una misteriosa transmisión en una vieja radio: es su padre, desaparecido hace décadas y ahora atrapado en el espacio en una configuración temporal alternativa. Para rescatarlo, Stella debe localizar la \"Máquina Génesis\", una reliquia de un proyecto clasificado de la CIA escondida en algún lugar de Tailandia. Su búsqueda la lanza a un viaje caleidoscópico a través del tiempo y el espacio que la enfrentará a bestias prehistóricas, tribus ancestrales, criaturas mutantes y a los límites de la propia realidad.",
-      "rating": 0,
-      "genres": "",
-      "tmdbId": "1086495",
-      "service": "tmdb-search"
     },
     {
       "id": "tmdb_31743_1766276500521",
