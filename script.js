@@ -300,6 +300,7 @@ function getCategoryIcon(categoryId) {
         'infantil': '👶',
         'ficcion': '🚀',
         'terror': '👻'
+        'jw.org': '' 
     };
     return icons[categoryId] || '🎬';
 }
@@ -312,6 +313,7 @@ function getCategoryName(categoryId) {
         'infantil': 'Infantil',
         'ficcion': 'Ficción',
         'terror': 'Terror'
+        'jw.org': 'jw.org'
     };
     return names[categoryId] || categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
 }
@@ -325,3 +327,4 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
