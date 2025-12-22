@@ -60,18 +60,6 @@
   ],
   "accion": [
     {
-      "id": "vimeus_56292_1766395056410",
-      "title": "Misión imposible: Protocolo fantasma",
-      "year": "2011",
-      "embedUrl": "https://vimeus.com/e/movie?tmdb=56292&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/y0hjsPyieqxcunEcAxb9mrrE09c.jpg",
-      "description": "El agente Ethan Hunt, acusado de un atentado terrorista con bombas contra el Kremlin, es desautorizado junto con toda la organización, al poner en marcha el presidente el llamado 'Protocolo fantasma'. Abandonado a su suerte y sin recursos, el objetivo de Ethan es rehabilitar el buen nombre de su agencia e impedir un nuevo ataque. Pero emprende esta misión con un equipo formado por fugitivos, cuyos motivos personales no conoce bien.",
-      "rating": 7.107,
-      "genres": "Acción, Suspense, Aventura",
-      "tmdbId": "56292",
-      "service": "vimeus"
-    },
-    {
       "id": "tmdb_1116465_1766359942234",
       "title": "El descubridor de leyendas",
       "year": "2024",
@@ -107,15 +95,15 @@
       "tmdbId": "353081",
       "service": "vimeus"
     },
-    {
-      "id": "vimeus_56292_1766394765854",
-      "title": "MisiÃ³n imposible: Protocolo fantasma",
+     {
+      "id": "vimeus_56292_1766395056410",
+      "title": "Misión imposible: Protocolo fantasma",
       "year": "2011",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=56292&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/y0hjsPyieqxcunEcAxb9mrrE09c.jpg",
-      "description": "El agente Ethan Hunt, acusado de un atentado terrorista con bombas contra el Kremlin, es desautorizado junto con toda la organizaciÃ³n, al poner en marcha el presidente el llamado 'Protocolo fantasma'. Abandonado a su suerte y sin recursos, el objetivo de Ethan es rehabilitar el buen nombre de su agencia e impedir un nuevo ataque. Pero emprende esta misiÃ³n con un equipo formado por fugitivos, cuyos motivos personales no conoce bien.",
+      "description": "El agente Ethan Hunt, acusado de un atentado terrorista con bombas contra el Kremlin, es desautorizado junto con toda la organización, al poner en marcha el presidente el llamado 'Protocolo fantasma'. Abandonado a su suerte y sin recursos, el objetivo de Ethan es rehabilitar el buen nombre de su agencia e impedir un nuevo ataque. Pero emprende esta misión con un equipo formado por fugitivos, cuyos motivos personales no conoce bien.",
       "rating": 7.107,
-      "genres": "AcciÃ³n, Suspense, Aventura",
+      "genres": "Acción, Suspense, Aventura",
       "tmdbId": "56292",
       "service": "vimeus"
     },
@@ -125,7 +113,7 @@
       "year": "2006",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=956&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/w61xBgFOfP8Z6uHKIKn1sl1TI8j.jpg",
-      "description": "Tras haber llevado a cabo diversas misiones, el agente especial Ethan Hunt se ha retirado del servicio activo y se ha prometido con su amada Julia. Pero, cuando es secuestrado uno de los agentes entrenados por ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©l, volverÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ de nuevo a la acciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n. TambiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©n tendrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ que enfrentarse a Owen Davian, un individuo sin escrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºpulos que trafica con armas y con informaciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n.",
+      "description": "Tras haber llevado a cabo diversas misiones, el agente especial Ethan Hunt se ha retirado del servicio activo y se ha prometido con su amada Julia. Pero, cuando es secuestrado uno de los agentes entrenados por el, volvera de nuevo a la accion. Tambien tendra que enfrentarse a Owen Davian, un individuo sin escrupulos que trafica con armas y con informacion.",
       "rating": 6.754,
       "genres": "Aventura, Accion, Suspense",
       "tmdbId": "956",
@@ -193,13 +181,13 @@
     },
     {
       "id": "vimeus_8845_1766240522888",
-      "title": "Alerta mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡xima",
+      "title": "Alerta maxima",
       "year": "1992",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=8845&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/iPTjwvyBiKNW86e0MOk30r64zWQ.jpg",
-      "description": "Un gran acorazado norteamericano realiza su ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºltima travesÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­a antes de ser retirado del servicio con una reducida tripulaciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n. Uno de los miembros de ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©sta es el cocinero, hombre taciturno del que ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºnicamente el capitÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡n sabe que es un brillante oficial, condecorado en Vietnam, Oriente Medio y PanamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡.",
+      "description": "Un gran acorazado norteamericano realiza su ultima travesi­a antes de ser retirado del servicio con una reducida tripulacion. Uno de los miembros es el cocinero, hombre taciturno del que tecnicamente el capitan sabe que es un brillante oficial, condecorado en Vietnam, Oriente Medio y Panama.",
       "rating": 6.291,
-      "genres": "AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, Suspense",
+      "genres": "Accion, Suspense",
       "tmdbId": "8845",
       "service": "vimeus"
     },
@@ -209,9 +197,9 @@
       "year": "2008",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=217&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/caC98g0VyWVztBStLu46rpKlbGw.jpg",
-      "description": "Indiana Jones y el joven Mutt se proponen encontrar la Calavera de Cristal de Akator. Los agentes soviÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©ticos tienen ese mismo objetivo. Liderados por la bella Irina Spalko, creen que el artilugio ayudarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ a su paÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­s a dominar el mundo si consiguen descifrar su secreto.",
+      "description": "Indiana Jones y el joven Mutt se proponen encontrar la Calavera de Cristal de Akator. Los agentes sovieticos tienen ese mismo objetivo. Liderados por la bella Irina Spalko, creen que el artilugio ayudara a su padre­s a dominar el mundo si consiguen descifrar su secreto.",
       "rating": 6.018,
-      "genres": "Aventura, AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
+      "genres": "Aventura, Accion",
       "tmdbId": "217",
       "service": "vimeus"
     },
@@ -221,9 +209,9 @@
       "year": "2023",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=335977&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/3Sj5ubQ0BLXd6JuECq52Ira8Oor.jpg",
-      "description": "El arqueÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³logo Indiana Jones deberÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ emprender otra aventura contra el tiempo para intentar recuperar un dial legendario que puede cambiar el curso de la historia. AcompaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±ado por su ahijada, Jones pronto se encuentra enfrentÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ndose a JÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼rgen Voller, un ex nazi que trabaja para la NASA.",
+      "description": "El arqueologo Indiana Jones debera emprender otra aventura contra el tiempo para intentar recuperar un dial legendario que puede cambiar el curso de la historia. Acompañado por su ahijada, Jones pronto se encuentra enfrentandose a Jargen Voller, un ex nazi que trabaja para la NASA.",
       "rating": 6.528,
-      "genres": "Aventura, AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
+      "genres": "Aventura, Accion",
       "tmdbId": "335977",
       "service": "vimeus"
     },
@@ -244,7 +232,7 @@
       "year": "2015",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=99861&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/3Lz6h5rlCFNNyCZRaRJ2ZjtBnAE.jpg",
-      "description": "Cuando Tony Stark intenta reactivar un programa caÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­do en desuso cuyo objetivo es mantener la paz, las cosas empiezan a torcerse y los hÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©roes mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡s poderosos de la Tierra, incluyendo a Iron Man, CapitÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡n AmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©rica, Thor, El IncreÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ble Hulk, Viuda Negra y Ojo de HalcÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, tendrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡n que afrontar la prueba definitiva cuando el destino del planeta se ponga en juego. Cuando el villano Ultron emerge, le corresponderÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ a Los Vengadores detener sus terribles planes, que junto a incÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³modas alianzas llevarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡n a una inesperada acciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n que allanarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ el camino para una ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©pica y ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂºnica aventura.",
+      "description": "Cuando Tony Stark intenta reactivar un programa cai­do en desuso cuyo objetivo es mantener la paz, las cosas empiezan a torcerse y los heroes mas poderosos de la Tierra, incluyendo a Iron Man, Capitan America, Thor, El Increi­ble Hulk, Viuda Negra y Ojo de Halcon, tendran que afrontar la prueba definitiva cuando el destino del planeta se ponga en juego. Cuando el villano Ultron emerge, le correspondera a Los Vengadores detener sus terribles planes, que junto a increibles modas alianzas llevaran a una inesperada accion que allanara el camino para una atipica y maratonica aventura.",
       "rating": 7.271,
       "genres": "Accion, Aventura, Ciencia ficcion",
       "tmdbId": "99861",
@@ -277,7 +265,7 @@
     },
     {
       "id": "streamtape_qxzaP6ovrXTzrqa_1766270019288",
-      "title": "Nunca mÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡s",
+      "title": "Nunca mas",
       "year": "2002",
       "embedUrl": "https://streamtape.com/e/qxzaP6ovrXTzrqa/Nunca_m%C3%A1s_%282002%29.mp4",
       "thumbUrl": "https://thumb.tapecontent.net/thumb/qxzaP6ovrXTzrqa/LXm4qrpjXefRLVg.jpg",
@@ -292,7 +280,7 @@
       "year": "2009",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=28178&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/rLPMD8BOHjvvjjCX7BZQdqNWBm2.jpg",
-      "description": "Basada en una historia real. Un profesor de universidad adopta a un perro vagabundo en una estaciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n del tren. Tras recabar informaciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n sobre el animal, el profesor descubre que el perro iba a los andenes a diario durante semanas para esperar el regreso de su amo, pero ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©ste habÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­a muerto en un accidente en la ciudad. El perro Hachiko, al lado de su nuevo amo a quien tambiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©n le cambiarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ la vida cuando descubre los lazos que se pueden crear entre un animal y una persona.",
+      "description": "Basada en una historia real. Un profesor de universidad adopta a un perro vagabundo en una estacion del tren. Tras recabar informacion sobre el animal, el profesor descubre que el perro iba a los andenes a diario durante semanas para esperar el regreso de su amo, pero este habria muerto en un accidente en la ciudad. El perro Hachiko, al lado de su nuevo amo a quien tambien le cambiara la vida cuando descubre los lazos que se pueden crear entre un animal y una persona.",
       "rating": 8.01,
       "genres": "Drama, Familia",
       "tmdbId": "28178",
@@ -306,9 +294,9 @@
       "year": "2016",
       "embedUrl": "https://streamtape.com/e/MaYPpQDBaMTGlZ/Zootopia_%282016%29.mp4",
       "thumbUrl": "https://thumb.tapecontent.net/thumb/MaYPpQDBaMTGlZ/MPbO9qPxlVHmk9m.jpg",
-      "description": "En una ciudad de animales antropomÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³rficos, una conejita policÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­a novata y un zorro estafador deben trabajar juntos para descubrir una conspiraciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n.",
+      "description": "En una ciudad de animales antropomorficos, una conejita policia novata y un zorro estafador deben trabajar juntos para descubrir una conspiracion.",
       "rating": 8,
-      "genres": "AnimaciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, Aventura, Comedia",
+      "genres": "Animacion, Aventura, Comedia",
       "service": "streamtape"
     }
   ],
@@ -319,7 +307,7 @@
       "year": "",
       "embedUrl": "https://streamtape.com/e/brYvrr7kDrhPawY/",
       "thumbUrl": "https://m.media-amazon.com/images/M/MV5BYmQ1Yjk5NDgtMzJkNy00NWE0LWExYWYtMWI2MmU3MTM3YzllXkEyXkFqcGc@._V1_.jpg",
-      "description": "Stella, cientÃÂÃÂÃÂÃÂ­fica y madre soltera, regresa a su ciudad natal tras aÃÂÃÂÃÂÃÂ±os de ausencia. Una noche, recibe una misteriosa transmisiÃÂÃÂÃÂÃÂ³n en una vieja radio: es su padre, desaparecido hace dÃÂÃÂÃÂÃÂ©cadas y ahora atrapado en el espacio en una configuraciÃÂÃÂÃÂÃÂ³n temporal alternativa. Para rescatarlo, Stella debe localizar la -MÃÂÃÂÃÂÃÂ¡quina GÃÂÃÂÃÂÃÂ©nesis-, una reliquia de un proyecto clasificado de la CIA escondida en algÃÂÃÂÃÂÃÂºn lugar de Tailandia. Su bÃÂÃÂÃÂÃÂºsqueda la lanza a un viaje caleidoscÃÂÃÂÃÂÃÂ³pico a travÃÂÃÂÃÂÃÂ©s del tiempo y el espacio que la enfrentarÃÂÃÂÃÂÃÂ¡ a bestias prehistÃÂÃÂÃÂÃÂ³ricas, tribus ancestrales, criaturas mutantes y a los lÃÂÃÂÃÂÃÂ­mites de la propia realidad.",
+      "description": "Stella, cienti­fica y madre soltera, regresa a su ciudad natal tras años de ausencia. Una noche, recibe una misteriosa transmision en una vieja radio: es su padre, desaparecido hace decadas y ahora atrapado en el espacio en una configuracion temporal alternativa. Para rescatarlo, Stella debe localizar la -Maquina Genesis-, una reliquia de un proyecto clasificado de la CIA escondida en algun lugar de Tailandia. Su busqueda la lanza a un viaje caleidoscopico a traves del tiempo y el espacio que la enfrentara a bestias prehistoricas, tribus ancestrales, criaturas mutantes y a los limites de la propia realidad.",
       "rating": 0,
       "genres": "",
       "service": "streamtape"
