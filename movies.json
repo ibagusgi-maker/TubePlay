@@ -48,18 +48,6 @@
       "service": "tmdb-search"
     },
     {
-      "id": "001",
-      "title": "Guerra Mundial Z",
-      "year": "2013",
-      "embedUrl": "https://vimeus.com/e/movie?tmdb=72190&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/31VpBgUX5O4Z3dn5ZbX8HLqoXH3.jpg",
-      "description": "Cuando el mundo comienza a ser invadido por una legiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n de muertos vivientes, Gerry Lane, un experto investigador de las Naciones Unidas, intentarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ evitar la caÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­da de la humanidad en una carrera contra el tiempo.",
-      "rating": 7,
-      "genres": "AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, Terror, Ciencia ficciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
-      "tmdbId": "72190",
-      "service": "vimeus"
-    },
-    {
       "id": "002",
       "title": "Cazando al asesino",
       "year": "2025",
@@ -563,18 +551,6 @@
       "rating": 7.545,
       "genres": "Terror, Suspense",
       "tmdbId": "756999",
-      "service": "vimeus"
-    },
-    {
-      "id": "005",
-      "title": "Guerra Mundial Z",
-      "year": "2013",
-      "embedUrl": "https://vimeus.com/e/movie?tmdb=72190&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/31VpBgUX5O4Z3dn5ZbX8HLqoXH3.jpg",
-      "description": "Cuando el mundo comienza a ser invadido por una legiÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n de muertos vivientes, Gerry Lane, un experto investigador de las Naciones Unidas, intentarÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡ evitar la caÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­da de la humanidad en una carrera contra el tiempo.",
-      "rating": 7,
-      "genres": "AcciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n, Terror, Ciencia ficciÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
-      "tmdbId": "72190",
       "service": "vimeus"
     }
   ]
