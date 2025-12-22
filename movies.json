@@ -551,18 +551,5 @@
       "tmdbId": "756999",
       "service": "vimeus"
     }
-  ],
-"jw.org": [
-    {
-      "id": "004",
-      "title": "Zootopia",
-      "year": "2016",
-      "embedUrl": "https://streamtape.com/e/MaYPpQDBaMTGlZ/Zootopia_%282016%29.mp4",
-      "thumbUrl": "https://thumb.tapecontent.net/thumb/MaYPpQDBaMTGlZ/MPbO9qPxlVHmk9m.jpg",
-      "description": "En una ciudad de animales antropomorficos, una conejita policia novata y un zorro estafador deben trabajar juntos para descubrir una conspiracion.",
-      "rating": 8,
-      "genres": "Animacion, Aventura, Comedia",
-      "service": "streamtape"
-    }
-  ],
+  ]
 }
