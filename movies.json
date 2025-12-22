@@ -36,6 +36,17 @@
       "service": "tmdb-search"
     },
     {
+      "id": "streamtape_b3R0RBqraGSdMJ_1766239090728",
+      "title": "High Ground  En la tierra de los justos",
+      "year": "",
+      "embedUrl": "https://streamtape.com/e/b3R0RBqraGSdMJ/High_Ground-_En_la_tierra_de_los_justos.mp4",
+      "thumbUrl": "https://images.justwatch.com/poster/338968618/s718/high-ground-en-la-tierra-de-los-justos.jpg",
+      "description": "",
+      "rating": 0,
+      "genres": "",
+      "service": "streamtape"
+    },
+    {
       "id": "tmdb_335977_1766147955639",
       "title": "Indiana Jones y el dial del destino",
       "year": "2023",
@@ -220,7 +231,7 @@
       "title": "High Ground  En la tierra de los justos",
       "year": "",
       "embedUrl": "https://streamtape.com/e/b3R0RBqraGSdMJ/High_Ground-_En_la_tierra_de_los_justos.mp4",
-      "thumbUrl": "https://thumb.tapecontent.net/thumb/b3R0RBqraGSdMJ/9kyO7e00Bxfaq7q.jpg",
+      "thumbUrl": "https://images.justwatch.com/poster/338968618/s718/high-ground-en-la-tierra-de-los-justos.jpg",
       "description": "",
       "rating": 0,
       "genres": "",
