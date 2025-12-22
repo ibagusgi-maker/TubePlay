@@ -368,6 +368,7 @@
                         <option value="infantil">Infantil</option>
                         <option value="ficcion">Ficción</option>
                         <option value="terror">Terror</option>
+                        <option value="jw.org">jw.org</option>
                         <option value="custom">➕ Crear nuevo género...</option>
                     </select>
                 </div>
@@ -477,7 +478,7 @@
         // Variables globales
         let moviesData = {};
         let selectedMovies = new Set();
-        let availableGenres = ['estrenos', 'accion', 'drama', 'infantil', 'ficcion', 'terror'];
+        let availableGenres = ['estrenos', 'accion', 'drama', 'infantil', 'ficcion', 'terror','jw.org'];
 
         // Configuración
         const config = {
@@ -1065,6 +1066,7 @@
                 'infantil': 'Infantil',
                 'ficcion': 'Ficción',
                 'terror': 'Terror'
+                'jw.org': 'jw.org'
             };
             return names[categoryId] || categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
         }
@@ -1103,3 +1105,4 @@
     </script>
 </body>
 </html>
+
