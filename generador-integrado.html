@@ -727,7 +727,10 @@ o
                 
                 const currentFile = await getResponse.json();
                 const newContent = JSON.stringify(currentMoviesData, null, 2);
-                const encodedContent = btoa(unescape(encodeURIComponent(newContent)));
+                
+                // Codificación mejorada para manejar caracteres especiales
+                const utf8Bytes = new TextEncoder().encode(newContent);
+                const encodedContent = btoa(String.fromCharCode(...utf8Bytes));
                 
                 // Actualizar archivo
                 const updateResponse = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/movies.json`, {
