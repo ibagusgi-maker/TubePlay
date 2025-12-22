@@ -414,7 +414,13 @@ o
                 }
                 
                 const data = await response.json();
-                const content = atob(data.content);
+                // Decodificación mejorada para manejar caracteres especiales
+                const binaryString = atob(data.content);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                const content = new TextDecoder('utf-8').decode(bytes);
                 currentMoviesData = JSON.parse(content);
                 
                 console.log('Movies data loaded:', currentMoviesData);
