@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "vimeus_1033148_1766416849065",
+      "title": "Die My Love",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1033148&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/u2xyvEmgkXmfMeCQcGf6mERNFfd.jpg",
+      "description": "Intenso drama psicológico y comedia negra que sigue a Grace (Jennifer Lawrence), una joven madre y escritora que comienza a sufrir una profunda depresión posparto tras mudarse con su esposo Jackson (Robert Pattinson) a la zona rural de Montana, buscando una vida más tranquila. A medida que la salud mental de Grace se deteriora, su matrimonio se ve afectado, transitando territorios de psicosis, tensión y desesperación. La película explora con crudeza y complejidad temas de maternidad, salud mental y el impacto de la depresión en la pareja. Dirigida por Lynne Ramsay, el filme está basado en la novela de Ariana Harwicz y fue aclamado en el Festival de Cannes 2025, destacando las actuaciones poderosas de Lawrence y Pattinson, junto a un elenco que incluye a LaKeith Stanfield, Nick Nolte y Sissy Spacek. Con una narrativa inquietante y una atmósfera absorbente, \"Die My Love\" invita a una reflexión profunda sobre las luchas internas y el amor en medio del caos emocional.",
+      "rating": 6.4,
+      "genres": "Drama, Suspense",
+      "tmdbId": "1033148",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_1094274_1766360934245",
       "title": "Y2K",
       "year": "2024",
