@@ -167,6 +167,17 @@
       "service": "streamtape"
     },
     {
+      "id": "003",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
+      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
+      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
+      "rating": 7.2,
+      "genres": "Accion, Thriller",
+      "service": "streamtape"
+    },
+    {
       "id": "tmdb_1116465_1766359942234",
       "title": "El descubridor de leyendas",
       "year": "2024",
@@ -177,17 +188,6 @@
       "genres": "",
       "tmdbId": "1116465",
       "service": "tmdb-search"
-    },
-    {
-      "id": "003",
-      "title": "Cazando al asesino",
-      "year": "2025",
-      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
-      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
-      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
-      "rating": 7.2,
-      "genres": "Accion, Thriller",
-      "service": "streamtape"
     },
     {
       "id": "vimeus_575264_1766358307856",
