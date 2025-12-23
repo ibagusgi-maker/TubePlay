@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "tmdb_1491902_1766483556035",
+      "title": "Bang",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/8SUzKOqe2ectvhYdSnR7Vq2F3n1.jpg",
+      "description": "",
+      "rating": 6.2,
+      "genres": "",
+      "tmdbId": "1491902",
+      "service": "tmdb-search"
+    },
+    {
       "id": "vimeus_654905_1766418272136",
       "title": "La bestia",
       "year": "2020",
@@ -315,7 +327,7 @@
       "title": "La hora de la verdad",
       "year": "",
       "embedUrl": "https://streamtape.com/e/DaYxmjzdJDfkKLR/La_hora_de_la_verdad.mp4",
-      "thumbUrl": "https://m.media-amazon.com/images/S/pv-target-images/9a67224acd2e2e208989d1a2a6d360ff988140be3cd70385d9631eaa55294b9c.jpg",
+      "thumbUrl": "https://thumb.tapecontent.net/thumb/DaYxmjzdJDfkKLR/yjLOjQJXMLF1LY6.jpg",
       "description": "",
       "rating": 0,
       "genres": "",
