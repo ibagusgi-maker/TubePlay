@@ -195,6 +195,10 @@
             font-size: 1.2rem;
         }
         
+        .movie-info {
+            flex: 1;
+        }
+        
         .movie-info h4 {
             font-size: 0.9rem;
             color: #fff;
@@ -204,6 +208,80 @@
         .movie-info p {
             font-size: 0.75rem;
             color: #aaa;
+        }
+        
+        .movie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+        }
+        
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            min-width: 60px;
+        }
+        
+        .btn-move {
+            background: linear-gradient(45deg, #74c0fc, #339af0);
+            color: white;
+        }
+        
+        .btn-move:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(116, 192, 252, 0.4);
+        }
+        
+        .btn-delete {
+            background: linear-gradient(45deg, #ff6b6b, #fa5252);
+            color: white;
+        }
+        
+        .btn-delete:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-order {
+            background: linear-gradient(45deg, #51cf66, #40c057);
+            color: white;
+            padding: 2px 6px;
+            font-size: 0.6rem;
+            min-width: 25px;
+        }
+        
+        .btn-order:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(81, 207, 102, 0.4);
+        }
+        
+        .btn-order:disabled {
+            background: #555;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .order-controls {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 2px;
+        }
+        
+        .move-select {
+            width: 100%;
+            padding: 2px 4px;
+            font-size: 0.7rem;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+            margin-bottom: 2px;
         }
         
         .config-section {
@@ -451,7 +529,7 @@ o
             }
             
             let html = `<div class="movie-list">`;
-            movies.forEach(movie => {
+            movies.forEach((movie, index) => {
                 html += `
                     <div class="movie-item">
                         ${movie.thumbUrl ? 
@@ -461,6 +539,30 @@ o
                         <div class="movie-info">
                             <h4>${movie.title}</h4>
                             <p>${movie.year || 'Sin año'} • ${movie.service || 'Desconocido'}</p>
+                        </div>
+                        <div class="movie-actions">
+                            <div class="order-controls">
+                                <button class="btn-small btn-order" onclick="moveMovieUp('${category}', ${index})" 
+                                        ${index === 0 ? 'disabled' : ''} title="Subir">
+                                    ⬆️
+                                </button>
+                                <button class="btn-small btn-order" onclick="moveMovieDown('${category}', ${index})" 
+                                        ${index === movies.length - 1 ? 'disabled' : ''} title="Bajar">
+                                    ⬇️
+                                </button>
+                            </div>
+                            <select class="move-select" onchange="moveMovie('${category}', ${index}, this.value)">
+                                <option value="">Mover a...</option>
+                                <option value="estrenos" ${category === 'estrenos' ? 'disabled' : ''}>🆕 Estrenos</option>
+                                <option value="accion" ${category === 'accion' ? 'disabled' : ''}>🔥 Acción</option>
+                                <option value="drama" ${category === 'drama' ? 'disabled' : ''}>🎭 Drama</option>
+                                <option value="infantil" ${category === 'infantil' ? 'disabled' : ''}>👶 Infantil</option>
+                                <option value="ficcion" ${category === 'ficcion' ? 'disabled' : ''}>🚀 Ficción</option>
+                                <option value="terror" ${category === 'terror' ? 'disabled' : ''}>👻 Terror</option>
+                            </select>
+                            <button class="btn-small btn-delete" onclick="deleteMovie('${category}', ${index}, '${movie.title.replace(/'/g, "\\'")}')">
+                                🗑️ Eliminar
+                            </button>
                         </div>
                     </div>
                 `;
@@ -763,6 +865,176 @@ o
             } catch (error) {
                 console.error('Error updating movies.json:', error);
                 throw error;
+            }
+        }
+        
+        // Función para mover película entre categorías
+        async function moveMovie(fromCategory, movieIndex, toCategory) {
+            if (!toCategory || fromCategory === toCategory) {
+                return;
+            }
+            
+            if (!confirm(`¿Mover "${currentMoviesData[fromCategory][movieIndex].title}" de ${fromCategory} a ${toCategory}?`)) {
+                // Resetear el select
+                document.querySelector(`select[onchange*="${fromCategory}, ${movieIndex}"]`).value = '';
+                return;
+            }
+            
+            showStatus('connectionStatus', '🔄 Moviendo película...', 'info');
+            
+            try {
+                // Obtener la película
+                const movie = currentMoviesData[fromCategory][movieIndex];
+                
+                // Remover de la categoría origen
+                currentMoviesData[fromCategory].splice(movieIndex, 1);
+                
+                // Agregar a la categoría destino
+                if (!currentMoviesData[toCategory]) {
+                    currentMoviesData[toCategory] = [];
+                }
+                currentMoviesData[toCategory].unshift(movie);
+                
+                // Actualizar en GitHub
+                await updateMoviesJsonOnGitHubWithMessage(`Mover película: ${movie.title} de ${fromCategory} a ${toCategory}`);
+                
+                showStatus('connectionStatus', '✅ Película movida exitosamente', 'success');
+                
+                // Recargar lista
+                loadCategoryMovies();
+                
+            } catch (error) {
+                showStatus('connectionStatus', `❌ Error: ${error.message}`, 'error');
+                console.error('Error moving movie:', error);
+            }
+        }
+        
+        // Función para eliminar película
+        async function deleteMovie(category, movieIndex, movieTitle) {
+            if (!confirm(`¿Estás seguro de eliminar "${movieTitle}"?\n\nEsta acción no se puede deshacer.`)) {
+                return;
+            }
+            
+            showStatus('connectionStatus', '🔄 Eliminando película...', 'info');
+            
+            try {
+                // Remover película del array
+                currentMoviesData[category].splice(movieIndex, 1);
+                
+                // Actualizar en GitHub
+                await updateMoviesJsonOnGitHubWithMessage(`Eliminar película: ${movieTitle}`);
+                
+                showStatus('connectionStatus', '✅ Película eliminada exitosamente', 'success');
+                
+                // Recargar lista
+                loadCategoryMovies();
+                
+            } catch (error) {
+                showStatus('connectionStatus', `❌ Error: ${error.message}`, 'error');
+                console.error('Error deleting movie:', error);
+            }
+        }
+        
+        // Función auxiliar para actualizar GitHub con mensaje personalizado
+        async function updateMoviesJsonOnGitHubWithMessage(message) {
+            try {
+                // Obtener SHA actual del archivo
+                const getResponse = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/movies.json`, {
+                    headers: {
+                        'Authorization': `token ${githubConfig.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (!getResponse.ok) {
+                    throw new Error('No se pudo obtener el archivo actual');
+                }
+                
+                const currentFile = await getResponse.json();
+                const newContent = JSON.stringify(currentMoviesData, null, 2);
+                
+                // Codificación mejorada para manejar caracteres especiales
+                const utf8Bytes = new TextEncoder().encode(newContent);
+                const encodedContent = btoa(String.fromCharCode(...utf8Bytes));
+                
+                // Actualizar archivo
+                const updateResponse = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/movies.json`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubConfig.token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        content: encodedContent,
+                        sha: currentFile.sha
+                    })
+                });
+                
+                if (!updateResponse.ok) {
+                    throw new Error('No se pudo actualizar el archivo');
+                }
+                
+                console.log('movies.json updated successfully');
+                
+            } catch (error) {
+                console.error('Error updating movies.json:', error);
+                throw error;
+            }
+        }
+        
+        // Función para mover película hacia arriba en el orden
+        async function moveMovieUp(category, movieIndex) {
+            if (movieIndex === 0) return; // Ya está en la primera posición
+            
+            showStatus('connectionStatus', '🔄 Reordenando película...', 'info');
+            
+            try {
+                // Intercambiar posiciones
+                const movies = currentMoviesData[category];
+                const movie = movies[movieIndex];
+                movies[movieIndex] = movies[movieIndex - 1];
+                movies[movieIndex - 1] = movie;
+                
+                // Actualizar en GitHub
+                await updateMoviesJsonOnGitHubWithMessage(`Reordenar: subir "${movie.title}" en ${category}`);
+                
+                showStatus('connectionStatus', '✅ Película reordenada exitosamente', 'success');
+                
+                // Recargar lista
+                loadCategoryMovies();
+                
+            } catch (error) {
+                showStatus('connectionStatus', `❌ Error: ${error.message}`, 'error');
+                console.error('Error reordering movie:', error);
+            }
+        }
+        
+        // Función para mover película hacia abajo en el orden
+        async function moveMovieDown(category, movieIndex) {
+            const movies = currentMoviesData[category];
+            if (movieIndex === movies.length - 1) return; // Ya está en la última posición
+            
+            showStatus('connectionStatus', '🔄 Reordenando película...', 'info');
+            
+            try {
+                // Intercambiar posiciones
+                const movie = movies[movieIndex];
+                movies[movieIndex] = movies[movieIndex + 1];
+                movies[movieIndex + 1] = movie;
+                
+                // Actualizar en GitHub
+                await updateMoviesJsonOnGitHubWithMessage(`Reordenar: bajar "${movie.title}" en ${category}`);
+                
+                showStatus('connectionStatus', '✅ Película reordenada exitosamente', 'success');
+                
+                // Recargar lista
+                loadCategoryMovies();
+                
+            } catch (error) {
+                showStatus('connectionStatus', `❌ Error: ${error.message}`, 'error');
+                console.error('Error reordering movie:', error);
             }
         }
     </script>
