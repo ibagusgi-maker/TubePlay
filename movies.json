@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "vimeus_798645_1766484357918",
+      "title": "The Running Man",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=798645&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/5WYxFamHLqroV0TilEw0RqBPzqG.jpg",
+      "description": "En una América distópica en el año 2025, Ben Richards participa en el violento reality show \"The Running Man\" con el fin de ganar suficiente dinero para revivir a su hija gravemente enferma.",
+      "rating": 6.833,
+      "genres": "Acción, Suspense, Ciencia ficción",
+      "tmdbId": "798645",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_1491902_1766483759808",
       "title": "Bang",
       "year": "2025",
