@@ -179,6 +179,17 @@
       "service": "tmdb-search"
     },
     {
+      "id": "003",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
+      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
+      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
+      "rating": 7.2,
+      "genres": "Accion, Thriller",
+      "service": "streamtape"
+    },
+    {
       "id": "vimeus_575264_1766358307856",
       "title": "Mision: Imposible - Sentencia mortal parte uno",
       "year": "2023",
@@ -189,17 +200,6 @@
       "genres": "Accion, Suspense",
       "tmdbId": "575264",
       "service": "vimeus"
-    },
-    {
-      "id": "003",
-      "title": "Cazando al asesino",
-      "year": "2025",
-      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
-      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
-      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
-      "rating": 7.2,
-      "genres": "Accion, Thriller",
-      "service": "streamtape"
     },
     {
       "id": "vimeus_353081_1766241689941",
