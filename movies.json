@@ -191,6 +191,17 @@
       "service": "vimeus"
     },
     {
+      "id": "003",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
+      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
+      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
+      "rating": 7.2,
+      "genres": "Accion, Thriller",
+      "service": "streamtape"
+    },
+    {
       "id": "vimeus_353081_1766241689941",
       "title": "Mision: Imposible - Fallout",
       "year": "2018",
@@ -201,17 +212,6 @@
       "genres": "Accion, Aventura",
       "tmdbId": "353081",
       "service": "vimeus"
-    },
-    {
-      "id": "003",
-      "title": "Cazando al asesino",
-      "year": "2025",
-      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
-      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
-      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
-      "rating": 7.2,
-      "genres": "Accion, Thriller",
-      "service": "streamtape"
     },
     {
       "id": "vimeus_56292_1766395056410",
