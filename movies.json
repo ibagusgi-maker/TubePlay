@@ -251,6 +251,17 @@
       "service": "vimeus"
     },
     {
+      "id": "003",
+      "title": "Cazando al asesino",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
+      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
+      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
+      "rating": 7.2,
+      "genres": "Accion, Thriller",
+      "service": "streamtape"
+    },
+    {
       "id": "vimeus_47933_1766240709323",
       "title": "Independence Day: Contraataque",
       "year": "2016",
@@ -261,17 +272,6 @@
       "genres": "Accion, Aventura, Ciencia ficcion",
       "tmdbId": "47933",
       "service": "vimeus"
-    },
-    {
-      "id": "003",
-      "title": "Cazando al asesino",
-      "year": "2025",
-      "embedUrl": "https://streamtape.com/e/bZPyBLr2OVUP1J3",
-      "thumbUrl": "https://peliculasbluray.com/wp-content/uploads/2025/12/Sin-titdf3ulo-185x278.jpg",
-      "description": "Una emocionante pelicula de accion donde un detective debe atrapar a un peligroso asesino antes de que cometa su proximo crimen.",
-      "rating": 7.2,
-      "genres": "Accion, Thriller",
-      "service": "streamtape"
     },
     {
       "id": "vimeus_602_1766240687576",
