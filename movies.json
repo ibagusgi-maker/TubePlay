@@ -155,6 +155,18 @@
   ],
   "accion": [
     {
+      "id": "vimeus_754_1766484777188",
+      "title": "Cara a cara",
+      "year": "1997",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=754&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/alizmPaRHq7sGHW5eoshoYzWjf9.jpg",
+      "description": "Para vengar la muerte de su hijo, el Agente del FBI San Archer se hace una peligrosa operación consistente en cambiar su cara por la del terrorista Castor Troy, que está en estado de coma. Peor cuando Castor despierta y toma la identidad de Sean, comienza para éste su peor pesadilla, teniendo que luchar no sólo por salvar su vida sino la de su mujer e hija.",
+      "rating": 7.05,
+      "genres": "Acción, Crimen, Ciencia ficción",
+      "tmdbId": "754",
+      "service": "vimeus"
+    },
+    {
       "id": "vimeus_798645_1766484385615",
       "title": "The Running Man",
       "year": "2025",
