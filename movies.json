@@ -131,6 +131,18 @@
   ],
   "accion": [
     {
+      "id": "tmdb_1491902_1766483617383",
+      "title": "Bang",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/8SUzKOqe2ectvhYdSnR7Vq2F3n1.jpg",
+      "description": "",
+      "rating": 6.2,
+      "genres": "",
+      "tmdbId": "1491902",
+      "service": "tmdb-search"
+    },
+    {
       "id": "tmdb_1116465_1766359942234",
       "title": "El descubridor de leyendas",
       "year": "2024",
