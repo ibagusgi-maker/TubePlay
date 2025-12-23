@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "vimeus_1491902_1766483759808",
+      "title": "Bang",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1491902&view_key=XjA2rm8ztIjMeQ5T9VosW8EPmhZ9vGqBkBS_Em_68Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/8SUzKOqe2ectvhYdSnR7Vq2F3n1.jpg",
+      "description": "",
+      "rating": 6.2,
+      "genres": "Acción, Suspense",
+      "tmdbId": "1491902",
+      "service": "vimeus"
+    },
+    {
       "id": "tmdb_1491902_1766483556035",
       "title": "Bang",
       "year": "2025",
