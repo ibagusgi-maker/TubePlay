@@ -480,18 +480,6 @@
       "service": "streamtape"
     },
     {
-      "id": "tmdb_718821_1766571315519",
-      "title": "Twisters",
-      "year": "2024",
-      "embedUrl": "",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/50xgtaDR0xJkLSVghdTGUeMoPHP.jpg",
-      "description": "Kate Carter, una ex cazadora de tormentas perseguida por un devastador encuentro con un tornado, es llamada por su amigo Javi de regreso a las llanuras para probar un nuevo e innovador sistema de seguimiento. Allí, se cruza con el encantador e imprudente ídolo de las redes sociales Tyler Owens y su estridente equipo. A medida que la temporada de tormentas se intensifica, se desatan fenómenos terroríficos nunca vistos, y Kate, Tyler y sus equipos competidores se encuentran directamente en el camino de múltiples sistemas de tormentas que convergen sobre Oklahoma en lo que será una lucha por sobrevivir.",
-      "rating": 6.794,
-      "genres": "",
-      "tmdbId": "718821",
-      "service": "tmdb-search"
-    },
-    {
       "id": "vimeus_945961_1766265950054",
       "title": "Alien: Romulus",
       "year": "2024",
@@ -502,6 +490,18 @@
       "genres": "Terror, Ciencia ficcion",
       "tmdbId": "945961",
       "service": "vimeus"
+    },
+    {
+      "id": "tmdb_718821_1766571315519",
+      "title": "Twisters",
+      "year": "2024",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/50xgtaDR0xJkLSVghdTGUeMoPHP.jpg",
+      "description": "Kate Carter, una ex cazadora de tormentas perseguida por un devastador encuentro con un tornado, es llamada por su amigo Javi de regreso a las llanuras para probar un nuevo e innovador sistema de seguimiento. Allí, se cruza con el encantador e imprudente ídolo de las redes sociales Tyler Owens y su estridente equipo. A medida que la temporada de tormentas se intensifica, se desatan fenómenos terroríficos nunca vistos, y Kate, Tyler y sus equipos competidores se encuentran directamente en el camino de múltiples sistemas de tormentas que convergen sobre Oklahoma en lo que será una lucha por sobrevivir.",
+      "rating": 6.794,
+      "genres": "",
+      "tmdbId": "718821",
+      "service": "tmdb-search"
     },
     {
       "id": "tmdb_216282_1766570065057",
