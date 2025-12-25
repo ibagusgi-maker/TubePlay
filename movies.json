@@ -553,6 +553,18 @@
   ],
   "ficcion": [
     {
+      "id": "vimeus_1084199_1766673952189",
+      "title": "La acompañante",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1084199&view_key=zNmrXcWuZPQ3rcZJV-UlWlryzVhkh-zRvQS5WCZyaw",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/nyloao2GWttUvS7KVcEM2eSDwUn.jpg",
+      "description": "La muerte de un multimillonario desencadena una serie de acontecimientos para Iris y sus amigos durante un viaje de fin de semana a su finca junto al lago.",
+      "rating": 7,
+      "genres": "Terror, Ciencia ficción, Suspense",
+      "tmdbId": "1084199",
+      "service": "vimeus"
+    },
+    {
       "id": "11",
       "title": "Taklee Genesis",
       "year": "",
