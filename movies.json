@@ -1,10 +1,22 @@
 {
   "estrenos": [
     {
+      "id": "vimeus_1084199_1766673719116",
+      "title": "La acompañante",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1084199&view_key=zNmrXcWuZPQ3rcZJV-UlWlryzVhkh-zRvQS5WCZyaw",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/nyloao2GWttUvS7KVcEM2eSDwUn.jpg",
+      "description": "La muerte de un multimillonario desencadena una serie de acontecimientos para Iris y sus amigos durante un viaje de fin de semana a su finca junto al lago.",
+      "rating": 7,
+      "genres": "Terror, Ciencia ficción, Suspense",
+      "tmdbId": "1084199",
+      "service": "vimeus"
+    },
+    {
       "id": "tmdb_618019_1766672768560",
       "title": "Jaque al asesino",
       "year": "2019",
-      "embedUrl": "https://streamtape.com/e/Wpwomvjk6wSbjpY",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/7nUd6rZ9Nmv8USawYaCOzVEkgfs.jpg",
       "description": "Un hombre se despierta en el hospital sin recordar quién es y descubre que la policía le busca por cometer una serie de asesinatos.",
       "rating": 5.3,
@@ -18,7 +30,7 @@
       "year": "2025",
       "embedUrl": "https://vimeus.com/e/movie?tmdb=1054867&view_key=zNmrXcWuZPQ3rcZJV-UlWlryzVhkh-zRvQS5WCZyaw",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/iZ1499F6hYxDxiqioy8oSUaxipG.jpg",
-      "description": "Un ex revolucionario, tras años apartado de la lucha, se ve obligado a volver a la acción para enfrentar a viejos enemigos en un ambiente cargado de tensión política, racismo y violencia militar... Adaptación modernizada de la novela -Vineland-, de Thomas Pynchon (1990), sobre los movimientos radicales de los años sesenta.",
+      "description": "Un ex revolucionario, tras años apartado de la lucha, se ve obligado a volver a la acción para enfrentar a viejos enemigos en un ambiente cargado de tensión política, racismo y violencia militar... Adaptación modernizada de la novela 'Vineland', de Thomas Pynchon (1990), sobre los movimientos radicales de los años sesenta.",
       "rating": 7.475,
       "genres": "Suspense, Crimen, Acción",
       "tmdbId": "1054867",
@@ -171,7 +183,7 @@
       "id": "tmdb_618019_1766672703374",
       "title": "Jaque al asesino",
       "year": "2019",
-      "embedUrl": "https://streamtape.com/e/Wpwomvjk6wSbjpY",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/7nUd6rZ9Nmv8USawYaCOzVEkgfs.jpg",
       "description": "Un hombre se despierta en el hospital sin recordar quién es y descubre que la policía le busca por cometer una serie de asesinatos.",
       "rating": 5.3,
