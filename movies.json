@@ -540,6 +540,18 @@
   ],
   "infantil": [
     {
+      "id": "vimeus_929204_1766674142908",
+      "title": "Wallace y Gromit: La venganza se sirve con plumas",
+      "year": "2024",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=929204&view_key=zNmrXcWuZPQ3rcZJV-UlWlryzVhkh-zRvQS5WCZyaw",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/e4YIxQEoz2lwZA3WLtFzAogxl44.jpg",
+      "description": "El superperro Gromit entra en acción para salvar a su amo cuando Wallace pierde el control de su sofisticado invento y acaba acusado de una serie de crímenes sospechosos.",
+      "rating": 7.504,
+      "genres": "Familia, Comedia, Aventura, Animación",
+      "tmdbId": "929204",
+      "service": "vimeus"
+    },
+    {
       "id": "004",
       "title": "Zootopia",
       "year": "2016",
