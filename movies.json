@@ -156,6 +156,18 @@
   ],
   "accion": [
     {
+      "id": "tmdb_618019_1766672703374",
+      "title": "Jaque al asesino",
+      "year": "2019",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/7nUd6rZ9Nmv8USawYaCOzVEkgfs.jpg",
+      "description": "Un hombre se despierta en el hospital sin recordar quién es y descubre que la policía le busca por cometer una serie de asesinatos.",
+      "rating": 5.3,
+      "genres": "",
+      "tmdbId": "618019",
+      "service": "tmdb-search"
+    },
+    {
       "id": "vimeus_1054867_1766672113122",
       "title": "Una batalla tras otra",
       "year": "2025",
