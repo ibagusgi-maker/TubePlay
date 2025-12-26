@@ -603,7 +603,7 @@
       "id": "tmdb_552524_1766750066827",
       "title": "Lilo y Stitch",
       "year": "2025",
-      "embedUrl": "https://streamtape.com/e/bVQ7zdeZBbTQDx",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/4oLLOAT55JhAoe73VliaSKFvEEr.jpg",
       "description": "La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.",
       "rating": 7.247,
@@ -923,6 +923,18 @@
     }
   ],
   "terror": [
+    {
+      "id": "tmdb_1232933_1766750252358",
+      "title": "Miedo en las profundidades",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/yfEJL8bRjyNlqxiYHu1cY7tJN9t.jpg",
+      "description": "Australia, 1946. Cuando una banda de despiadados delincuentes pierde el oro robado al hundirse su coche en un río, recurren a un equipo de buceadores desesperados y sin suerte para recuperarlo. Lo que comienza como una misión de recuperación de alto riesgo se complica cuando los buceadores se encuentran con un feroz tiburón toro... pero los peligros en las profundidades del agua son sólo una fracción de los que les esperan arriba.",
+      "rating": 6.302,
+      "genres": "",
+      "tmdbId": "1232933",
+      "service": "tmdb-search"
+    },
     {
       "id": "streamtape_6XrQPGaOdpu92JZ_1766748891018",
       "title": "Sé lo que hicisteis el último verano",
