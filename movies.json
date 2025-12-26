@@ -900,6 +900,18 @@
   ],
   "terror": [
     {
+      "id": "tmdb_1145221_1766746634970",
+      "title": "Criatura voraz",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/iinb9KTcTqVWVj8sgNIFssaUGae.jpg",
+      "description": "Cuando una chica irrumpe en su consulta de psiquiatría afirmando que un ente se está alimentando de ella, Jordan y su clarividente madre deben encontrar la forma de detener a la fuerza antes de que se apodere de ella por completo.",
+      "rating": 6.837,
+      "genres": "",
+      "tmdbId": "1145221",
+      "service": "tmdb-search"
+    },
+    {
       "id": "vimeus_396535_1766485141813",
       "title": "Train to Busan",
       "year": "2016",
