@@ -432,6 +432,18 @@
   ],
   "drama": [
     {
+      "id": "tmdb_1426776_1766747092794",
+      "title": "Harta",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/4d2PJ6QLAVd9w66E918JSWjkgs7.jpg",
+      "description": "¿Cuál será la gota que colme el vaso? Un día devastador lleva al límite a una madre soltera y trabajadora, y la empuja a cometer un impactante acto de desesperación.",
+      "rating": 7.791,
+      "genres": "",
+      "tmdbId": "1426776",
+      "service": "tmdb-search"
+    },
+    {
       "id": "tmdb_2116_1766709886990",
       "title": "A contrarreloj",
       "year": "2003",
