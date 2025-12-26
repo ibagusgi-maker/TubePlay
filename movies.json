@@ -432,6 +432,18 @@
   ],
   "drama": [
     {
+      "id": "tmdb_924525_1766746990988",
+      "title": "Harta",
+      "year": "2021",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/x4Ua6CEXsgpernZulgYbcvudlEY.jpg",
+      "description": "Carmela, una niña de 12 años, el día de su cumpleaños es obligada a verse con su padre en un centro de encuentro familiar debido a la sentencia de violencia de género que este tiene sobre su madre.",
+      "rating": 10,
+      "genres": "",
+      "tmdbId": "924525",
+      "service": "tmdb-search"
+    },
+    {
       "id": "tmdb_2116_1766709886990",
       "title": "A contrarreloj",
       "year": "2003",
@@ -627,7 +639,7 @@
       "id": "tmdb_1234821_1766746377192",
       "title": "Jurassic World: El renacer",
       "year": "2025",
-      "embedUrl": "https://streamtape.com/e/4dpjePM3LGCOAq",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/2sbGd7kDhMicDkT097FR9a2JyGU.jpg",
       "description": "Cinco años después de los eventos de \"Dominion\", la ecología del planeta ha demostrado ser insoportable para los dinosaurios, donde los pocos que quedan viven aislados en las regiones ecuatoriales. Zora Bennett es contratada para dirigir a un equipo de especialistas cuyo objetivo es conseguir el material genético de las tres criaturas más grandes, las cuales tienen en su ADN la clave para fabricar un medicamento que aportará grandes beneficios a la humanidad. Pero la operación se cruzará con una familia cuyo barco volcó y todos acabarán en una isla prohibida ocupada por dinosaurios de numerosas especies, donde tendrán que hacer lo imposible para sobrevivir.",
       "rating": 6.37,
@@ -903,7 +915,7 @@
       "id": "tmdb_1145221_1766746634970",
       "title": "Criatura voraz",
       "year": "2025",
-      "embedUrl": "https://streamtape.com/e/o6z8lYxM9OCdb0",
+      "embedUrl": "",
       "thumbUrl": "https://image.tmdb.org/t/p/w500/iinb9KTcTqVWVj8sgNIFssaUGae.jpg",
       "description": "Cuando una chica irrumpe en su consulta de psiquiatría afirmando que un ente se está alimentando de ella, Jordan y su clarividente madre deben encontrar la forma de detener a la fuerza antes de que se apodere de ella por completo.",
       "rating": 6.837,
