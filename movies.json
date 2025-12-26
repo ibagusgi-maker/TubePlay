@@ -432,18 +432,6 @@
   ],
   "drama": [
     {
-      "id": "tmdb_924525_1766746990988",
-      "title": "Harta",
-      "year": "2021",
-      "embedUrl": "",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/x4Ua6CEXsgpernZulgYbcvudlEY.jpg",
-      "description": "Carmela, una niña de 12 años, el día de su cumpleaños es obligada a verse con su padre en un centro de encuentro familiar debido a la sentencia de violencia de género que este tiene sobre su madre.",
-      "rating": 10,
-      "genres": "",
-      "tmdbId": "924525",
-      "service": "tmdb-search"
-    },
-    {
       "id": "tmdb_2116_1766709886990",
       "title": "A contrarreloj",
       "year": "2003",
