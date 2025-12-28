@@ -1,6 +1,18 @@
 {
   "estrenos": [
     {
+      "id": "tmdb_1242898_1766920631179",
+      "title": "Predator: Badlands",
+      "year": "2025",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/iANU8C9n6lH7Wx0MbOdM4aATfrW.jpg",
+      "description": "Un joven Predator rechazado por su clan encuentra un aliado inesperado en Thia y emprende un peligroso viaje en busca del adversario definitivo.",
+      "rating": 7.33,
+      "genres": "",
+      "tmdbId": "1242898",
+      "service": "tmdb-search"
+    },
+    {
       "id": "vimeus_982843_1766915302364",
       "title": "El gran diluvio",
       "year": "2025",
