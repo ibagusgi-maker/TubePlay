@@ -984,18 +984,6 @@
   ],
   "terror": [
     {
-      "id": "tmdb_1407861_1766833385740",
-      "title": "Colmillos del Bayou",
-      "year": "2025",
-      "embedUrl": "https://streamtape.com/e/2P6eW3aQpDUZ7qw",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/eVoBCxDHmpXhidKWhIubG2I0ffJ.jpg",
-      "description": "Las vacaciones de la recién graduada Kyle y sus amigos se convierten en desastre cuando escapan de un accidente de avión en el desolado e infame Bayou de Luisiana. Allí descubren que hay algo mucho más peligroso acechando en las aguas.",
-      "rating": 5.562,
-      "genres": "",
-      "tmdbId": "1407861",
-      "service": "tmdb-search"
-    },
-    {
       "id": "tmdb_1100988_1766751442460",
       "title": "28 años después",
       "year": "2025",
@@ -1005,6 +993,18 @@
       "rating": 6.651,
       "genres": "",
       "tmdbId": "1100988",
+      "service": "tmdb-search"
+    },
+    {
+      "id": "tmdb_1407861_1766833385740",
+      "title": "Colmillos del Bayou",
+      "year": "2025",
+      "embedUrl": "https://streamtape.com/e/2P6eW3aQpDUZ7qw",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/eVoBCxDHmpXhidKWhIubG2I0ffJ.jpg",
+      "description": "Las vacaciones de la recién graduada Kyle y sus amigos se convierten en desastre cuando escapan de un accidente de avión en el desolado e infame Bayou de Luisiana. Allí descubren que hay algo mucho más peligroso acechando en las aguas.",
+      "rating": 5.562,
+      "genres": "",
+      "tmdbId": "1407861",
       "service": "tmdb-search"
     },
     {
