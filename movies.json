@@ -1079,18 +1079,6 @@
       "service": "tmdb-search"
     },
     {
-      "id": "tmdb_11069_1767089522314",
-      "title": "Temblores 2: La respuesta",
-      "year": "1996",
-      "embedUrl": "",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/uGogIG6BHjoKnKJTRnFA5YwmFu0.jpg",
-      "description": "Las criaturas subterráneas que aterrorizaron a un pueblecito se abren ahora camino a través de los campos mexicanos. De nuevo, la población vuelve a estar a la expectativa, deseando que esta situación acabe pronto.",
-      "rating": 6.3,
-      "genres": "",
-      "tmdbId": "11069",
-      "service": "tmdb-search"
-    },
-    {
       "id": "vimeus_1197137_1766240023753",
       "title": "Black Phone 2",
       "year": "2025",
@@ -1101,6 +1089,18 @@
       "genres": "Terror, Suspense",
       "tmdbId": "1197137",
       "service": "vimeus"
+    },
+    {
+      "id": "tmdb_11069_1767089522314",
+      "title": "Temblores 2: La respuesta",
+      "year": "1996",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/uGogIG6BHjoKnKJTRnFA5YwmFu0.jpg",
+      "description": "Las criaturas subterráneas que aterrorizaron a un pueblecito se abren ahora camino a través de los campos mexicanos. De nuevo, la población vuelve a estar a la expectativa, deseando que esta situación acabe pronto.",
+      "rating": 6.3,
+      "genres": "",
+      "tmdbId": "11069",
+      "service": "tmdb-search"
     },
     {
       "id": "tmdb_10891_1767089548720",
