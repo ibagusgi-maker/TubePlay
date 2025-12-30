@@ -1020,18 +1020,6 @@
       "service": "tmdb-search"
     },
     {
-      "id": "tmdb_10891_1767089548720",
-      "title": "Temblores 4: Comienza la leyenda",
-      "year": "2004",
-      "embedUrl": "",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/hzjNWXlOnL85gkmW404OvAxGXtj.jpg",
-      "description": "Cuando en la remota ciudad minera de Rejection (Nevada) unos obreros caen en las garras de un depredador invisible, Hiram Gummer, propietario de la mina y bisabuelo de Burt Gummer, contrata a un mercenario para destruir a las carnívoras criaturas antes de que destrocen su preciada fuente de ingresos. Lo que destrocen es un asalto sin tregua que traslada el campo de batalla desde las profundidades de la tierra hasta las calles de Rejection, un enfrentamiento lleno de suspense.",
-      "rating": 5.8,
-      "genres": "",
-      "tmdbId": "10891",
-      "service": "tmdb-search"
-    },
-    {
       "id": "tmdb_1100988_1766751442460",
       "title": "28 años después",
       "year": "2025",
@@ -1041,6 +1029,18 @@
       "rating": 6.651,
       "genres": "",
       "tmdbId": "1100988",
+      "service": "tmdb-search"
+    },
+    {
+      "id": "tmdb_10891_1767089548720",
+      "title": "Temblores 4: Comienza la leyenda",
+      "year": "2004",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/hzjNWXlOnL85gkmW404OvAxGXtj.jpg",
+      "description": "Cuando en la remota ciudad minera de Rejection (Nevada) unos obreros caen en las garras de un depredador invisible, Hiram Gummer, propietario de la mina y bisabuelo de Burt Gummer, contrata a un mercenario para destruir a las carnívoras criaturas antes de que destrocen su preciada fuente de ingresos. Lo que destrocen es un asalto sin tregua que traslada el campo de batalla desde las profundidades de la tierra hasta las calles de Rejection, un enfrentamiento lleno de suspense.",
+      "rating": 5.8,
+      "genres": "",
+      "tmdbId": "10891",
       "service": "tmdb-search"
     },
     {
