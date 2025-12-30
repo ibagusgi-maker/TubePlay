@@ -1008,18 +1008,6 @@
       "service": "tmdb-search"
     },
     {
-      "id": "tmdb_9362_1767089481069",
-      "title": "Temblores",
-      "year": "1990",
-      "embedUrl": "",
-      "thumbUrl": "https://image.tmdb.org/t/p/w500/gGg2haDaZF3vklYQXPPQ6ccCNj0.jpg",
-      "description": "En Perfección, un pequeño pueblo al borde del desierto de Nevada, algo parece suceder debajo de la tierra. Cuando las líneas telefónicas y las carreteras quedan cortadas, los habitantes comienzan a sentir pánico, pues todo parece indicar que hay algo vivo y terrorífico bajo las arenas del desierto.",
-      "rating": 6.93,
-      "genres": "",
-      "tmdbId": "9362",
-      "service": "tmdb-search"
-    },
-    {
       "id": "tmdb_1232933_1766750252358",
       "title": "Miedo en las profundidades",
       "year": "2025",
@@ -1029,6 +1017,18 @@
       "rating": 6.302,
       "genres": "",
       "tmdbId": "1232933",
+      "service": "tmdb-search"
+    },
+    {
+      "id": "tmdb_9362_1767089481069",
+      "title": "Temblores",
+      "year": "1990",
+      "embedUrl": "",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/gGg2haDaZF3vklYQXPPQ6ccCNj0.jpg",
+      "description": "En Perfección, un pequeño pueblo al borde del desierto de Nevada, algo parece suceder debajo de la tierra. Cuando las líneas telefónicas y las carreteras quedan cortadas, los habitantes comienzan a sentir pánico, pues todo parece indicar que hay algo vivo y terrorífico bajo las arenas del desierto.",
+      "rating": 6.93,
+      "genres": "",
+      "tmdbId": "9362",
       "service": "tmdb-search"
     },
     {
