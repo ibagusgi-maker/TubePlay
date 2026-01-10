@@ -1032,6 +1032,18 @@
   ],
   "terror": [
     {
+      "id": "vimeus_1364992_1768082796892",
+      "title": "Perdoname Papa",
+      "year": "2024",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1364992&view_key=nM8MAvRfqiAyhmZ9al4K943OQv20_6dEetYnwzA95Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/b9FLi1lsg267ki2siw4wmXtUUHT.jpg",
+      "description": "Una detective debe encontrar al responsable de mutilar varios cadáveres en una mansión.",
+      "rating": 6.607,
+      "genres": "Suspense, Terror, Crimen",
+      "tmdbId": "1364992",
+      "service": "vimeus"
+    },
+    {
       "id": "tmdb_1100988_1766751442460",
       "title": "28 años después",
       "year": "2025",
