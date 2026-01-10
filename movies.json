@@ -696,6 +696,18 @@
   ],
   "ficcion": [
     {
+      "id": "vimeus_1286669_1768081846803",
+      "title": "Unexpected Treasures",
+      "year": "2025",
+      "embedUrl": "https://vimeus.com/e/movie?tmdb=1286669&view_key=nM8MAvRfqiAyhmZ9al4K943OQv20_6dEetYnwzA95Q",
+      "thumbUrl": "https://image.tmdb.org/t/p/w500/2e5J9i1GDVDuW8E6Q6fmfJ9ZrPl.jpg",
+      "description": "",
+      "rating": 1,
+      "genres": "Ciencia ficción",
+      "tmdbId": "1286669",
+      "service": "vimeus"
+    },
+    {
       "id": "tmdb_1242898_1766920659931",
       "title": "Predator: Badlands",
       "year": "2025",
